@@ -39,41 +39,41 @@ class ZombieChar extends Component {
         if (this.catMode()) {
             return (
                 <div className="zombie-preview" v-images-loaded="zombieLoaded">
-                    <img  style={skinStyle} className="right-upper-arm" src="static/zombieparts/right-upper-arm-1@2x.png" />
-                    <img  style={shirtStyle}className="torso" src="static/zombieparts/torso-1@2x.png" />
-                    <img  style={skinStyle}className="cat-legs" src="static/zombieparts/catlegs.png" />
-                    <img  style={shirtStyle} className="shirt" src={this.currentShirtChoice()} />
-                    <img  style={skinStyle} className="left-forearm" src="static/zombieparts/left-forearm-1@2x.png" />
-                    <img  style={skinStyle} className="right-forearm" src="static/zombieparts/right-forearm-1@2x.png" />
-                    <img  style={skinStyle} className="left-upper-arm" src="static/zombieparts/left-upper-arm-1@2x.png" />
-                    <img  style={skinStyle} className="left-hand" src="static/zombieparts/hand1-1@2x.png" />
-                    <img  style={skinStyle} className="right-hand" src="static/zombieparts/hand-2-1@2x.png" />
-                    <img  style={skinStyle} className="head" src={this.currentHeadChoice()} />
-                    <img  style={eyeStyle}  className="eye"  src={this.currentEyeChoice()} />
-                    <img  className="mouth" src="static/zombieparts/mouth-1@2x.png" />
+                    <img  style={skinStyle} className="right-upper-arm" src="static/zombieparts/right-upper-arm-1@2x.png" alt="right upper arm" />
+                    <img  style={shirtStyle}className="torso" src="static/zombieparts/torso-1@2x.png" alt="torso" />
+                    <img  style={skinStyle}className="cat-legs" src="static/zombieparts/catlegs.png" alt="catleg" />
+                    <img  style={shirtStyle} className="shirt" src={this.currentShirtChoice()} alt="shirt" />
+                    <img  style={skinStyle} className="left-forearm" src="static/zombieparts/left-forearm-1@2x.png" alt="left forearm" />
+                    <img  style={skinStyle} className="right-forearm" src="static/zombieparts/right-forearm-1@2x.png" alt="right forearm" />
+                    <img  style={skinStyle} className="left-upper-arm" src="static/zombieparts/left-upper-arm-1@2x.png" alt="left upper arm" />
+                    <img  style={skinStyle} className="left-hand" src="static/zombieparts/hand1-1@2x.png" alt="left hand" />
+                    <img  style={skinStyle} className="right-hand" src="static/zombieparts/hand-2-1@2x.png" alt="right hand" />
+                    <img  style={skinStyle} className="head" src={this.currentHeadChoice()} alt="head" />
+                    <img  style={eyeStyle}  className="eye"  src={this.currentEyeChoice()} alt="eyes" />
+                    <img  className="mouth" src="static/zombieparts/mouth-1@2x.png" alt="mouth" />
                 </div>
             )
         } else {
             return (
                 <div className="zombie-preview" v-images-loaded="zombieLoaded">
-                    <img style={shirtStyle}className="left-feet" src="static/zombieparts/left-feet-1@2x.png" />
-                    <img style={shirtStyle}className="right-feet" src="static/zombieparts/right-feet-1@2x.png" />
-                    <img style={shirtStyle}className="left-leg" src="static/zombieparts/left-leg-1@2x.png" />
-                    <img style={shirtStyle}className="right-leg" src="static/zombieparts/right-leg-1@2x.png" />
-                    <img style={shirtStyle}className="left-thigh" src="static/zombieparts/left-thigh-1@2x.png" />
-                    <img style={shirtStyle}className="right-thigh" src="static/zombieparts/right-thigh-1@2x.png" />
+                    <img style={shirtStyle}className="left-feet" src="static/zombieparts/left-feet-1@2x.png" alt="left feet" />
+                    <img style={shirtStyle}className="right-feet" src="static/zombieparts/right-feet-1@2x.png" alt="right feet" />
+                    <img style={shirtStyle}className="left-leg" src="static/zombieparts/left-leg-1@2x.png" alt="left leg" />
+                    <img style={shirtStyle}className="right-leg" src="static/zombieparts/right-leg-1@2x.png" alt="right leg" />
+                    <img style={shirtStyle}className="left-thigh" src="static/zombieparts/left-thigh-1@2x.png" alt="left thigh" />
+                    <img style={shirtStyle}className="right-thigh" src="static/zombieparts/right-thigh-1@2x.png" alt="right thigh" />
 
-                    <img  style={skinStyle} className="right-upper-arm" src="static/zombieparts/right-upper-arm-1@2x.png" />
-                    <img  style={shirtStyle}className="torso" src="static/zombieparts/torso-1@2x.png" />
-                    <img  style={shirtStyle} className="shirt" src={this.currentShirtChoice()} />
-                    <img  style={skinStyle} className="left-forearm" src="static/zombieparts/left-forearm-1@2x.png" />
-                    <img  style={skinStyle} className="right-forearm" src="static/zombieparts/right-forearm-1@2x.png" />
-                    <img  style={skinStyle} className="left-upper-arm" src="static/zombieparts/left-upper-arm-1@2x.png" />
-                    <img  style={skinStyle} className="left-hand" src="static/zombieparts/hand1-1@2x.png" />
-                    <img  style={skinStyle} className="right-hand" src="static/zombieparts/hand-2-1@2x.png" />
-                    <img  style={skinStyle} className="head" src={this.currentHeadChoice()} />
-                    <img  style={eyeStyle}  className="eye"  src={this.currentEyeChoice()} />
-                    <img  className="mouth" src="static/zombieparts/mouth-1@2x.png" />
+                    <img  style={skinStyle} className="right-upper-arm" src="static/zombieparts/right-upper-arm-1@2x.png" alt="right upper arm" />
+                    <img  style={shirtStyle}className="torso" src="static/zombieparts/torso-1@2x.png" alt="torso" />
+                    <img  style={shirtStyle} className="shirt" src={this.currentShirtChoice()} alt="shirt" />
+                    <img  style={skinStyle} className="left-forearm" src="static/zombieparts/left-forearm-1@2x.png" alt="left forearm" />
+                    <img  style={skinStyle} className="right-forearm" src="static/zombieparts/right-forearm-1@2x.png" alt="right forearm" />
+                    <img  style={skinStyle} className="left-upper-arm" src="static/zombieparts/left-upper-arm-1@2x.png" alt="left upper arm" />
+                    <img  style={skinStyle} className="left-hand" src="static/zombieparts/hand1-1@2x.png" alt="left hand" />
+                    <img  style={skinStyle} className="right-hand" src="static/zombieparts/hand-2-1@2x.png" alt="right hand" />
+                    <img  style={skinStyle} className="head" src={this.currentHeadChoice()} alt="head" />
+                    <img  style={eyeStyle}  className="eye"  src={this.currentEyeChoice()} alt="eyes" />
+                    <img  className="mouth" src="static/zombieparts/mouth-1@2x.png" alt="mouth" />
                 </div>
             )
         }

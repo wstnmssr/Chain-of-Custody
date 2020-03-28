@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Icon, Card, Header, Modal, Button } from "semantic-ui-react";
-import ZombieChar from "./zombieChar";
 import ReactTooltip from "react-tooltip";
 import ActionButton from "./ActionButton";
 import ZombieCardContent from "./zombieCardContent";

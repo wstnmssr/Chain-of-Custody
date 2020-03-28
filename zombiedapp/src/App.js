@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CryptoZombiesContract from "./contract_ABI/CryptoZombies.json";
 import getWeb3 from "./utils/getWeb3";
 import initBlockchain from "./utils/initBlockchain";
 import getZombieCount from "./utils/getZombieCount";

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Card } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import ZombieChar from "./zombieChar";
 
 class ZombieCardContent extends Component {
