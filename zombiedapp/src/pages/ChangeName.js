@@ -15,7 +15,7 @@ function mapStateToProps(state) {
   };
 }
 
-class FeedOnKitty extends Component {
+class ChangeName extends Component {
   state = {
     value: "",
     message: "",
@@ -114,4 +114,4 @@ class FeedOnKitty extends Component {
   }
 }
 
-export default connect(mapStateToProps)(FeedOnKitty);
+export default connect(mapStateToProps)(ChangeName);
