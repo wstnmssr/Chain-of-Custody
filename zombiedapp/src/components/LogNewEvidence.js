@@ -15,7 +15,7 @@ function mapStateToProps(state) {
 
 // Create a new Zombie
 
-class CreateZombie extends Component {
+class LogNewEvidence extends Component {
   state = {
     modalOpen: false,
     value: "",
@@ -61,8 +61,8 @@ class CreateZombie extends Component {
       return (
       <Modal
         trigger={
-          <Button primary disabled={createDisabled} onClick={this.handleOpen}>
-            Create Zombie
+          <Button style={{"background-color":"#8cab4d"}} disabled={createDisabled} onClick={this.handleOpen}>
+            Log New Evidence
           </Button>
         }
         open={this.state.modalOpen}
@@ -103,4 +103,4 @@ class CreateZombie extends Component {
   }
 }
 
-export default connect(mapStateToProps)(CreateZombie);
+export default connect(mapStateToProps)(LogNewEvidence);
