@@ -86,8 +86,8 @@ class ZombieInventory extends Component {
     return (
       <div>
         <hr />
-        <h2> Complete Zombie Inventory </h2>
-        The zombies you own have a yellow background; clicking anywhere on a
+        <h2> Complete Evidence Locker 🗄️</h2>
+        The evidence you hold has a yellow background; clicking anywhere on a
         yellow card will bring up a list of actions you can perform.
         <hr />
         <Grid columns={2} verticalAlign="middle">
