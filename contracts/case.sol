@@ -10,6 +10,7 @@ contract Case is ChainOfCustody {
         case_info = Case_Info(_case_name, _case_number);
         case_owner = msg.sender;
         authorized_agents[msg.sender] = true; //case_owner is also an authorized agent
+        authorizers[msg.sender] = true;
         creation_time = now;
     }
 
@@ -43,12 +44,20 @@ contract Case is ChainOfCustody {
         evidence_holder[number_of_items] = case_owner;
         number_of_items = number_of_items.add(1);
     }
+    
+    function authorize_authorizer(address _agent) only_owner public {
+        authorizers[_agent] = true;
+    }
 
-    function authorize_agent(address _agent) only_owner public {
+    function deauthorize_authorizer(address _agent) only_owner public {
+        authorizers[_agent] = false;
+    }
+
+    function authorize_agent(address _agent) only_authorizers public {
         authorized_agents[_agent] = true;
     }
 
-    function deauthorize_agent(address _agent) only_owner public {
+    function deauthorize_agent(address _agent) only_authorizers public {
         authorized_agents[_agent] = false;
     }
     
