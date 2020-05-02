@@ -16,6 +16,8 @@ import AttackZombie from "./pages/AttackZombie";
 import FeedOnKitty from "./pages/FeedOnKitty";
 import ChangeName from "./pages/ChangeName";
 import LevelUp from "./pages/LevelUp";
+import LogNewEvidence from "./pages/LogNewEvidence"
+import Team from "./pages/Team"
 
 import store from "./redux/store";
 
@@ -63,6 +65,16 @@ class App extends Component {
             <TopBar state={this.state} />
             <div>
               <Route exact path="/" component={Greeting} />
+              <Route
+                exact
+                path="/Team"
+                component={Team}
+              />
+              <Route
+                exact
+                path="/LogNewEvidence"
+                component={LogNewEvidence}
+              />
               <Route
                 exact
                 path="/myZombieInventory"

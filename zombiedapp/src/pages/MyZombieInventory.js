@@ -69,6 +69,7 @@ class MyZombieInventory extends Component {
   render() {
     return (
       <div>
+        <Segment style={{ minHeight:'1em' }} />
         <hr />
         <h2> Your Evidence Holdings </h2>
         The pieces of evidence you hold have a yellow background; clicking anywhere on a

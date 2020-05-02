@@ -33,7 +33,7 @@ class LogNewEvidence extends Component {
     this.setState({
       loading: true,
       errorMessage: "",
-      message: "waiting for blockchain transaction to complete..."
+      message: "Waiting for blockchain transaction to complete..."
     });
     try {
       await this.props.CZ.methods
@@ -68,7 +68,7 @@ class LogNewEvidence extends Component {
         open={this.state.modalOpen}
         onClose={this.handleClose}
       >
-        <Header icon="browser" content="Create a New Zombie" />
+        <Header icon="browser" content="Log a New Piece of Evidence" />
         <Modal.Content>
           <img src="static/images/zombieWarrior.jpg" alt="zombie warrior" /><Header>Be sure to give your zombie a WORTHY name!!!</Header>
           <br /> <br />
