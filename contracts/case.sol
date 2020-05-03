@@ -10,7 +10,6 @@ contract Case is ChainOfCustody {
         case_info = Case_Info(_case_name, _case_number);
         case_owner = msg.sender;
         authorized_agents[msg.sender] = true; //case_owner is also an authorized agent
-        authorizers[msg.sender] = true;
         creation_time = now;
     }
 
@@ -44,20 +43,12 @@ contract Case is ChainOfCustody {
         evidence_holder[number_of_items] = case_owner;
         number_of_items = number_of_items.add(1);
     }
-    
-    function authorize_authorizer(address _agent) only_owner public {
-        authorizers[_agent] = true;
-    }
 
-    function deauthorize_authorizer(address _agent) only_owner public {
-        authorizers[_agent] = false;
-    }
-
-    function authorize_agent(address _agent) only_authorizers public {
+    function authorize_agent(address _agent) only_owner public {
         authorized_agents[_agent] = true;
     }
 
-    function deauthorize_agent(address _agent) only_authorizers public {
+    function deauthorize_agent(address _agent) only_owner public {
         authorized_agents[_agent] = false;
     }
     
@@ -70,17 +61,19 @@ contract Case is ChainOfCustody {
         storage_log[_item_number].push(Check_Out(msg.sender, case_owner, purpose, now, 0, false));
         id_to_evidence[_item_number].status = "Checked out";
         evidence_holder[_item_number] = msg.sender;
+        userEvidenceCount[msg.sender] = userEvidenceCount[msg.sender].add(1);
     }
     
     //sets checkedIn value of most recent check_out object in Evidence storage_log to true
     function check_in(uint _item_number) only_authorized public {
         require(evidence_holder[_item_number] == msg.sender); //can only check in if function caller holds the evidence
         require(id_to_evidence[_item_number].exists); //evidence has been logged
-        require(storage_log[_item_number][storage_log[_item_number].length-1].checked_in = false); //evidence has to be checked out
+        require(storage_log[_item_number][storage_log[_item_number].length-1].checked_in == false); //evidence has to be checked out
         
         storage_log[_item_number][storage_log[_item_number].length-1].checked_in = true;
         storage_log[_item_number][storage_log[_item_number].length-1].time_checked_in = now;
         id_to_evidence[_item_number].status = "Stored in evidence locker";
+        userEvidenceCount[msg.sender] = userEvidenceCount[msg.sender].sub(1);
     }
     
     //update an existing piece of evidence (in case of typos or other reasons)
@@ -131,5 +124,9 @@ contract Case is ChainOfCustody {
     
     function get_evidence(uint _item_number) only_authorized public view returns (Evidence memory) {
         return id_to_evidence[_item_number];
+    }
+    
+    function get_evidence_count() only_authorized public view returns (uint) {
+        return userEvidenceCount[msg.sender];
     }
 }
