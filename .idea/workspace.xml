@@ -20,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1b3ePBjPG6ZpHw8rU8ZOApGqehZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -32,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/zombiedapp/src/contract_ABI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zombiedapp/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -42,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/public" />
       <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
       <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
@@ -57,7 +63,7 @@
     </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\awhit\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Wes\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -104,7 +110,8 @@
       <workItem from="1585438682794" duration="630000" />
       <workItem from="1587865184942" duration="1028000" />
       <workItem from="1587866245051" duration="61915000" />
-      <workItem from="1588539722953" duration="4282000" />
+      <workItem from="1588535129634" duration="319000" />
+      <workItem from="1588535466489" duration="8033000" />
     </task>
     <servers />
   </component>

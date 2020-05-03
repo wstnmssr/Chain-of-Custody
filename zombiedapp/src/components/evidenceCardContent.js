@@ -22,6 +22,7 @@ class EvidenceCardContent extends Component {
           </Card.Description>
         </Card.Content>
       </div>
+
     );
   }
 }

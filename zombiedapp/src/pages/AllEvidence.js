@@ -48,7 +48,7 @@ class AllEvidence extends Component {
         let metaData = await this.props.CoC.methods.get_evidence(i).call();
         eList.push(metaData);
         let myHolder = await this.props.CoC.evidence_holder.call(i, function(err,res){
-          console.log("oopsie i hate myself")
+          console.log("oopsie")
         });
         eHolder.push(myHolder);
       } catch (err) {
