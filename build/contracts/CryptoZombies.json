@@ -511,7 +511,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 6,
-        "sourceUnit": 1848,
+        "sourceUnit": 1846,
         "src": "35:31:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -525,10 +525,10 @@
               "id": 3,
               "name": "ZombieOwnership",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1847,
+              "referencedDeclaration": 1845,
               "src": "96:15:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ZombieOwnership_$1847",
+                "typeIdentifier": "t_contract$_ZombieOwnership_$1845",
                 "typeString": "contract ZombieOwnership"
               }
             },
@@ -538,13 +538,13 @@
           }
         ],
         "contractDependencies": [
-          614,
-          723,
-          1150,
-          1320,
-          1516,
-          1704,
-          1847
+          612,
+          721,
+          1148,
+          1318,
+          1514,
+          1702,
+          1845
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -552,13 +552,13 @@
         "id": 5,
         "linearizedBaseContracts": [
           5,
-          1847,
-          614,
-          1150,
-          1704,
-          1516,
-          1320,
-          723
+          1845,
+          612,
+          1148,
+          1702,
+          1514,
+          1318,
+          721
         ],
         "name": "CryptoZombies",
         "nodeType": "ContractDefinition",
@@ -599,7 +599,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 6,
-        "sourceUnit": 1848,
+        "sourceUnit": 1846,
         "src": "35:31:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -613,10 +613,10 @@
               "id": 3,
               "name": "ZombieOwnership",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1847,
+              "referencedDeclaration": 1845,
               "src": "96:15:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ZombieOwnership_$1847",
+                "typeIdentifier": "t_contract$_ZombieOwnership_$1845",
                 "typeString": "contract ZombieOwnership"
               }
             },
@@ -626,13 +626,13 @@
           }
         ],
         "contractDependencies": [
-          614,
-          723,
-          1150,
-          1320,
-          1516,
-          1704,
-          1847
+          612,
+          721,
+          1148,
+          1318,
+          1514,
+          1702,
+          1845
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -640,13 +640,13 @@
         "id": 5,
         "linearizedBaseContracts": [
           5,
-          1847,
-          614,
-          1150,
-          1704,
-          1516,
-          1320,
-          723
+          1845,
+          612,
+          1148,
+          1702,
+          1514,
+          1318,
+          721
         ],
         "name": "CryptoZombies",
         "nodeType": "ContractDefinition",
@@ -967,7 +967,7 @@
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-03T01:49:54.663Z",
+  "updatedAt": "2020-05-03T21:56:47.079Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

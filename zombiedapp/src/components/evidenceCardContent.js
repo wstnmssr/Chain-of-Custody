@@ -13,15 +13,15 @@ class EvidenceCardContent extends Component {
 
   render() {
     return (
-      <Card.Content>
-        <Image src='static/images/france.jpg' wrapped ui={false} />
-        <Card.Header>
-          Evidence Description:
-        </Card.Header>
-        <Card.Description>
-          <b>{this.truncate(this.props.evidence.evidenceDescription)}</b>
-        </Card.Description>
-      </Card.Content>
+      <div>
+        <Image src='static/images/france.jpg' />
+        <Card.Content>
+          <Card.Header>Evidence Description: </Card.Header>
+          <Card.Description>
+            {this.truncate(this.props.evidence.evidenceDescription)}
+          </Card.Description>
+        </Card.Content>
+      </div>
     );
   }
 }
