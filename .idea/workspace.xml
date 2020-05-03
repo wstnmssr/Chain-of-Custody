@@ -47,14 +47,6 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
-      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public\static" />
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
-    </key>
-
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
@@ -71,9 +63,7 @@
     </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-
     <configuration>C:\Users\Wes\AppData\Roaming\Subversion</configuration>
-
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -122,7 +112,6 @@
       <workItem from="1587866245051" duration="61915000" />
       <workItem from="1588535129634" duration="319000" />
       <workItem from="1588535466489" duration="8033000" />
-
     </task>
     <servers />
   </component>
