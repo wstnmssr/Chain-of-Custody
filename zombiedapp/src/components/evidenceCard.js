@@ -61,7 +61,7 @@ class EvidenceCard extends Component {
 
           <a
             href="javascript:;"
-            data-tip="Click on me to view actions for this zombie"
+            data-tip="Click on me to view actions for this evidence"
             onClick={e => this.modalOpen(e)}
           >
             <EvidenceCardContent evidence={this.props} />
@@ -72,7 +72,7 @@ class EvidenceCard extends Component {
           <Modal open={this.state.modalOpen} onClose={this.handleClose}>
             <Header
               icon="browser"
-              content="These are the actions you can take with your zombie!"
+              content="These are the actions you can take with your evidence!"
             />
 
             <Modal.Actions>
