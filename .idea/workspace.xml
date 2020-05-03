@@ -54,6 +54,7 @@
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
     </key>
+
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
@@ -61,9 +62,18 @@
       <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
       <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
+    </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
+
     <configuration>C:\Users\Wes\AppData\Roaming\Subversion</configuration>
+
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -112,6 +122,7 @@
       <workItem from="1587866245051" duration="61915000" />
       <workItem from="1588535129634" duration="319000" />
       <workItem from="1588535466489" duration="8033000" />
+
     </task>
     <servers />
   </component>
@@ -127,6 +138,22 @@
       <screen x="1600" y="0" width="1600" height="900" />
     </state>
     <state x="2113" y="253" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.868/1600.0.1600.900@1600.0.1600.900" timestamp="1588469502279" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
     <state x="239" y="106" key="SettingsEditor" timestamp="1588448307446">
       <screen x="0" y="0" width="1600" height="868" />
     </state>

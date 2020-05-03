@@ -34,7 +34,7 @@ class MyEvidenceHoldings extends Component {
 
   makeZombieCards = async () => {
     const myZombies = await this.props.CoC.methods
-      .getZombiesByOwner(this.props.userAddress)
+      .getEvidenceByOwner(this.props.userAddress)
       .call();
     let zombieTable = [];
     for (
