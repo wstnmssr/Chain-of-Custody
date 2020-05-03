@@ -20,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1b3ePBjPG6ZpHw8rU8ZOApGqehZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,19 +47,19 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/public" />
-      <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
-      <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
       <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public\static" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
     </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">

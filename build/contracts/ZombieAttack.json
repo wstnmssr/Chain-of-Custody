@@ -348,14 +348,14 @@
     "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/zombieattack.sol",
     "exportedSymbols": {
       "ZombieAttack": [
-        1150
+        1148
       ]
     },
-    "id": 1151,
+    "id": 1149,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1015,
+        "id": 1013,
         "literals": [
           "solidity",
           ">=",
@@ -371,10 +371,10 @@
       {
         "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/zombiehelper.sol",
         "file": "./zombiehelper.sol",
-        "id": 1016,
+        "id": 1014,
         "nodeType": "ImportDirective",
-        "scope": 1151,
-        "sourceUnit": 1705,
+        "scope": 1149,
+        "sourceUnit": 1703,
         "src": "35:28:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -385,47 +385,47 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1017,
+              "id": 1015,
               "name": "ZombieHelper",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1704,
+              "referencedDeclaration": 1702,
               "src": "92:12:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ZombieHelper_$1704",
+                "typeIdentifier": "t_contract$_ZombieHelper_$1702",
                 "typeString": "contract ZombieHelper"
               }
             },
-            "id": 1018,
+            "id": 1016,
             "nodeType": "InheritanceSpecifier",
             "src": "92:12:7"
           }
         ],
         "contractDependencies": [
-          723,
-          1320,
-          1516,
-          1704
+          721,
+          1318,
+          1514,
+          1702
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1150,
+        "id": 1148,
         "linearizedBaseContracts": [
-          1150,
-          1704,
-          1516,
-          1320,
-          723
+          1148,
+          1702,
+          1514,
+          1318,
+          721
         ],
         "name": "ZombieAttack",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1021,
+            "id": 1019,
             "name": "randNonce",
             "nodeType": "VariableDeclaration",
-            "scope": 1150,
+            "scope": 1148,
             "src": "112:18:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -434,7 +434,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1019,
+              "id": 1017,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "112:4:7",
@@ -446,7 +446,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 1020,
+              "id": 1018,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -465,10 +465,10 @@
           },
           {
             "constant": false,
-            "id": 1024,
+            "id": 1022,
             "name": "attackVictoryProbability",
             "nodeType": "VariableDeclaration",
-            "scope": 1150,
+            "scope": 1148,
             "src": "137:34:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -477,7 +477,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1022,
+              "id": 1020,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "137:4:7",
@@ -489,7 +489,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3730",
-              "id": 1023,
+              "id": 1021,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -508,25 +508,25 @@
           },
           {
             "body": {
-              "id": 1052,
+              "id": 1050,
               "nodeType": "Block",
               "src": "235:137:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1036,
+                    "id": 1034,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1031,
+                      "id": 1029,
                       "name": "randNonce",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1021,
+                      "referencedDeclaration": 1019,
                       "src": "246:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -541,7 +541,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 1034,
+                          "id": 1032,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -566,32 +566,32 @@
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1032,
+                          "id": 1030,
                           "name": "randNonce",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1021,
+                          "referencedDeclaration": 1019,
                           "src": "258:9:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "id": 1033,
+                        "id": 1031,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 820,
+                        "referencedDeclaration": 818,
                         "src": "258:13:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
                           "typeString": "function (uint256,uint256) pure returns (uint256)"
                         }
                       },
-                      "id": 1035,
+                      "id": 1033,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -611,7 +611,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1037,
+                  "id": 1035,
                   "nodeType": "ExpressionStatement",
                   "src": "246:28:7"
                 },
@@ -622,7 +622,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1050,
+                    "id": 1048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -638,11 +638,11 @@
                               "arguments": [
                                 {
                                   "argumentTypes": null,
-                                  "id": 1042,
+                                  "id": 1040,
                                   "name": "now",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1864,
+                                  "referencedDeclaration": 1862,
                                   "src": "324:3:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -653,18 +653,18 @@
                                   "argumentTypes": null,
                                   "expression": {
                                     "argumentTypes": null,
-                                    "id": 1043,
+                                    "id": 1041,
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 1862,
+                                    "referencedDeclaration": 1860,
                                     "src": "329:3:7",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
                                       "typeString": "msg"
                                     }
                                   },
-                                  "id": 1044,
+                                  "id": 1042,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -680,11 +680,11 @@
                                 },
                                 {
                                   "argumentTypes": null,
-                                  "id": 1045,
+                                  "id": 1043,
                                   "name": "randNonce",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1021,
+                                  "referencedDeclaration": 1019,
                                   "src": "341:9:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -709,18 +709,18 @@
                                 ],
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1040,
+                                  "id": 1038,
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1849,
+                                  "referencedDeclaration": 1847,
                                   "src": "307:3:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
                                     "typeString": "abi"
                                   }
                                 },
-                                "id": 1041,
+                                "id": 1039,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -734,7 +734,7 @@
                                   "typeString": "function () pure returns (bytes memory)"
                                 }
                               },
-                              "id": 1046,
+                              "id": 1044,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -756,18 +756,18 @@
                                 "typeString": "bytes memory"
                               }
                             ],
-                            "id": 1039,
+                            "id": 1037,
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1856,
+                            "referencedDeclaration": 1854,
                             "src": "297:9:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
                               "typeString": "function (bytes memory) pure returns (bytes32)"
                             }
                           },
-                          "id": 1047,
+                          "id": 1045,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -789,7 +789,7 @@
                             "typeString": "bytes32"
                           }
                         ],
-                        "id": 1038,
+                        "id": 1036,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -802,7 +802,7 @@
                         },
                         "typeName": "uint"
                       },
-                      "id": 1048,
+                      "id": 1046,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -820,11 +820,11 @@
                     "operator": "%",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1049,
+                      "id": 1047,
                       "name": "_modulus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1026,
+                      "referencedDeclaration": 1024,
                       "src": "356:8:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -837,30 +837,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1030,
-                  "id": 1051,
+                  "functionReturnParameters": 1028,
+                  "id": 1049,
                   "nodeType": "Return",
                   "src": "285:79:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1053,
+            "id": 1051,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randMod",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1027,
+              "id": 1025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1026,
+                  "id": 1024,
                   "name": "_modulus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1053,
+                  "scope": 1051,
                   "src": "197:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -869,7 +869,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1025,
+                    "id": 1023,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:4:7",
@@ -885,15 +885,15 @@
               "src": "196:15:7"
             },
             "returnParameters": {
-              "id": 1030,
+              "id": 1028,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1029,
+                  "id": 1027,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1053,
+                  "scope": 1051,
                   "src": "229:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -902,7 +902,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1028,
+                    "id": 1026,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "229:4:7",
@@ -917,7 +917,7 @@
               ],
               "src": "228:6:7"
             },
-            "scope": 1150,
+            "scope": 1148,
             "src": "180:192:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -925,37 +925,37 @@
           },
           {
             "body": {
-              "id": 1148,
+              "id": 1146,
               "nodeType": "Block",
               "src": "460:648:7",
               "statements": [
                 {
                   "assignments": [
-                    1064
+                    1062
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1064,
+                      "id": 1062,
                       "name": "myZombie",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "471:23:7",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                        "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                         "typeString": "struct ZombieFactory.Zombie"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1063,
+                        "id": 1061,
                         "name": "Zombie",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1197,
+                        "referencedDeclaration": 1195,
                         "src": "471:6:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                           "typeString": "struct ZombieFactory.Zombie"
                         }
                       },
@@ -963,30 +963,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1068,
+                  "id": 1066,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1065,
+                      "id": 1063,
                       "name": "zombies",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1200,
+                      "referencedDeclaration": 1198,
                       "src": "497:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1197_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1195_storage_$dyn_storage",
                         "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                       }
                     },
-                    "id": 1067,
+                    "id": 1065,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1066,
+                      "id": 1064,
                       "name": "_zombieId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1055,
+                      "referencedDeclaration": 1053,
                       "src": "505:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1000,7 +1000,7 @@
                     "nodeType": "IndexAccess",
                     "src": "497:18:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Zombie_$1197_storage",
+                      "typeIdentifier": "t_struct$_Zombie_$1195_storage",
                       "typeString": "struct ZombieFactory.Zombie storage ref"
                     }
                   },
@@ -1009,31 +1009,31 @@
                 },
                 {
                   "assignments": [
-                    1070
+                    1068
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1070,
+                      "id": 1068,
                       "name": "enemyZombie",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "526:26:7",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                        "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                         "typeString": "struct ZombieFactory.Zombie"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1069,
+                        "id": 1067,
                         "name": "Zombie",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1197,
+                        "referencedDeclaration": 1195,
                         "src": "526:6:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                           "typeString": "struct ZombieFactory.Zombie"
                         }
                       },
@@ -1041,30 +1041,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1074,
+                  "id": 1072,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1071,
+                      "id": 1069,
                       "name": "zombies",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1200,
+                      "referencedDeclaration": 1198,
                       "src": "555:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1197_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1195_storage_$dyn_storage",
                         "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                       }
                     },
-                    "id": 1073,
+                    "id": 1071,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1072,
+                      "id": 1070,
                       "name": "_targetId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1057,
+                      "referencedDeclaration": 1055,
                       "src": "563:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1078,7 +1078,7 @@
                     "nodeType": "IndexAccess",
                     "src": "555:18:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Zombie_$1197_storage",
+                      "typeIdentifier": "t_struct$_Zombie_$1195_storage",
                       "typeString": "struct ZombieFactory.Zombie storage ref"
                     }
                   },
@@ -1087,15 +1087,15 @@
                 },
                 {
                   "assignments": [
-                    1076
+                    1074
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1076,
+                      "id": 1074,
                       "name": "rand",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "584:9:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1104,7 +1104,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1075,
+                        "id": 1073,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "584:4:7",
@@ -1117,14 +1117,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1080,
+                  "id": 1078,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "hexValue": "313030",
-                        "id": 1078,
+                        "id": 1076,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1147,18 +1147,18 @@
                           "typeString": "int_const 100"
                         }
                       ],
-                      "id": 1077,
+                      "id": 1075,
                       "name": "randMod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1053,
+                      "referencedDeclaration": 1051,
                       "src": "596:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$_t_uint256_$",
                         "typeString": "function (uint256) returns (uint256)"
                       }
                     },
-                    "id": 1079,
+                    "id": 1077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1182,18 +1182,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1083,
+                    "id": 1081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1081,
+                      "id": 1079,
                       "name": "rand",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1076,
+                      "referencedDeclaration": 1074,
                       "src": "623:4:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1204,11 +1204,11 @@
                     "operator": "<=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1082,
+                      "id": 1080,
                       "name": "attackVictoryProbability",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1024,
+                      "referencedDeclaration": 1022,
                       "src": "631:24:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1222,14 +1222,14 @@
                     }
                   },
                   "falseBody": {
-                    "id": 1146,
+                    "id": 1144,
                     "nodeType": "Block",
                     "src": "922:179:7",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1130,
+                          "id": 1128,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1238,25 +1238,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1122,
+                              "id": 1120,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "937:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1124,
+                            "id": 1122,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "lossCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1196,
+                            "referencedDeclaration": 1194,
                             "src": "937:18:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -1271,7 +1271,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1128,
+                                "id": 1126,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1298,46 +1298,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1125,
+                                  "id": 1123,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "958:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1126,
+                                "id": 1124,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "lossCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1196,
+                                "referencedDeclaration": 1194,
                                 "src": "958:18:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1127,
+                              "id": 1125,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "958:22:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1129,
+                            "id": 1127,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1357,14 +1357,14 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1131,
+                        "id": 1129,
                         "nodeType": "ExpressionStatement",
                         "src": "937:46:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1140,
+                          "id": 1138,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1373,25 +1373,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1132,
+                              "id": 1130,
                               "name": "enemyZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1070,
+                              "referencedDeclaration": 1068,
                               "src": "998:11:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1134,
+                            "id": 1132,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "winCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1194,
+                            "referencedDeclaration": 1192,
                             "src": "998:20:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -1406,7 +1406,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1138,
+                                "id": 1136,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1433,46 +1433,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1135,
+                                  "id": 1133,
                                   "name": "enemyZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1070,
+                                  "referencedDeclaration": 1068,
                                   "src": "1021:11:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1136,
+                                "id": 1134,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "winCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1194,
+                                "referencedDeclaration": 1192,
                                 "src": "1021:20:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1137,
+                              "id": 1135,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "1021:24:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1139,
+                            "id": 1137,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1492,7 +1492,7 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1141,
+                        "id": 1139,
                         "nodeType": "ExpressionStatement",
                         "src": "998:50:7"
                       },
@@ -1502,14 +1502,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1143,
+                              "id": 1141,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "1080:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             }
@@ -1517,22 +1517,22 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             ],
-                            "id": 1142,
+                            "id": 1140,
                             "name": "_triggerCooldown",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1398,
+                            "referencedDeclaration": 1396,
                             "src": "1063:16:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Zombie_$1197_storage_ptr_$returns$__$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Zombie_$1195_storage_ptr_$returns$__$",
                               "typeString": "function (struct ZombieFactory.Zombie storage pointer)"
                             }
                           },
-                          "id": 1144,
+                          "id": 1142,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1546,24 +1546,24 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1145,
+                        "id": 1143,
                         "nodeType": "ExpressionStatement",
                         "src": "1063:26:7"
                       }
                     ]
                   },
-                  "id": 1147,
+                  "id": 1145,
                   "nodeType": "IfStatement",
                   "src": "619:482:7",
                   "trueBody": {
-                    "id": 1121,
+                    "id": 1119,
                     "nodeType": "Block",
                     "src": "657:259:7",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1092,
+                          "id": 1090,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1572,25 +1572,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1084,
+                              "id": 1082,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "672:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1086,
+                            "id": 1084,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "winCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1194,
+                            "referencedDeclaration": 1192,
                             "src": "672:17:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -1605,7 +1605,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1090,
+                                "id": 1088,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1632,46 +1632,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1087,
+                                  "id": 1085,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "692:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1088,
+                                "id": 1086,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "winCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1194,
+                                "referencedDeclaration": 1192,
                                 "src": "692:17:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1089,
+                              "id": 1087,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "692:21:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1091,
+                            "id": 1089,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1691,14 +1691,14 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1093,
+                        "id": 1091,
                         "nodeType": "ExpressionStatement",
                         "src": "672:44:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1102,
+                          "id": 1100,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1707,25 +1707,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1094,
+                              "id": 1092,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "731:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1096,
+                            "id": 1094,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "level",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1190,
+                            "referencedDeclaration": 1188,
                             "src": "731:14:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint32",
@@ -1740,7 +1740,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1100,
+                                "id": 1098,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1767,46 +1767,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1097,
+                                  "id": 1095,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "748:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1098,
+                                "id": 1096,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "level",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1190,
+                                "referencedDeclaration": 1188,
                                 "src": "748:14:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint32",
                                   "typeString": "uint32"
                                 }
                               },
-                              "id": 1099,
+                              "id": 1097,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 916,
+                              "referencedDeclaration": 914,
                               "src": "748:18:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint32_$_t_uint32_$returns$_t_uint32_$bound_to$_t_uint32_$",
                                 "typeString": "function (uint32,uint32) pure returns (uint32)"
                               }
                             },
-                            "id": 1101,
+                            "id": 1099,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1826,14 +1826,14 @@
                             "typeString": "uint32"
                           }
                         },
-                        "id": 1103,
+                        "id": 1101,
                         "nodeType": "ExpressionStatement",
                         "src": "731:38:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1112,
+                          "id": 1110,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1842,25 +1842,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1104,
+                              "id": 1102,
                               "name": "enemyZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1070,
+                              "referencedDeclaration": 1068,
                               "src": "784:11:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1106,
+                            "id": 1104,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "lossCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1196,
+                            "referencedDeclaration": 1194,
                             "src": "784:21:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -1875,7 +1875,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1110,
+                                "id": 1108,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1902,46 +1902,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1107,
+                                  "id": 1105,
                                   "name": "enemyZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1070,
+                                  "referencedDeclaration": 1068,
                                   "src": "808:11:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1108,
+                                "id": 1106,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "lossCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1196,
+                                "referencedDeclaration": 1194,
                                 "src": "808:21:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1109,
+                              "id": 1107,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "808:25:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1111,
+                            "id": 1109,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1961,7 +1961,7 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1113,
+                        "id": 1111,
                         "nodeType": "ExpressionStatement",
                         "src": "784:52:7"
                       },
@@ -1971,11 +1971,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1115,
+                              "id": 1113,
                               "name": "_zombieId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1055,
+                              "referencedDeclaration": 1053,
                               "src": "867:9:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1986,25 +1986,25 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 1116,
+                                "id": 1114,
                                 "name": "enemyZombie",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1070,
+                                "referencedDeclaration": 1068,
                                 "src": "878:11:7",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                  "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                   "typeString": "struct ZombieFactory.Zombie storage pointer"
                                 }
                               },
-                              "id": 1117,
+                              "id": 1115,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "dna",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1188,
+                              "referencedDeclaration": 1186,
                               "src": "878:15:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2014,7 +2014,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "7a6f6d626965",
-                              "id": 1118,
+                              "id": 1116,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2045,18 +2045,18 @@
                                 "typeString": "literal_string \"zombie\""
                               }
                             ],
-                            "id": 1114,
+                            "id": 1112,
                             "name": "feedAndMultiply",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1487,
+                            "referencedDeclaration": 1485,
                             "src": "851:15:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
                               "typeString": "function (uint256,uint256,string memory)"
                             }
                           },
-                          "id": 1119,
+                          "id": 1117,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2070,7 +2070,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1120,
+                        "id": 1118,
                         "nodeType": "ExpressionStatement",
                         "src": "851:53:7"
                       }
@@ -2080,7 +2080,7 @@
               ]
             },
             "documentation": null,
-            "id": 1149,
+            "id": 1147,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2088,11 +2088,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1060,
+                    "id": 1058,
                     "name": "_zombieId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1055,
+                    "referencedDeclaration": 1053,
                     "src": "449:9:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -2100,14 +2100,14 @@
                     }
                   }
                 ],
-                "id": 1061,
+                "id": 1059,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1059,
+                  "id": 1057,
                   "name": "onlyOwnerOf",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1368,
+                  "referencedDeclaration": 1366,
                   "src": "437:11:7",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -2121,15 +2121,15 @@
             "name": "attack",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1058,
+              "id": 1056,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1055,
+                  "id": 1053,
                   "name": "_zombieId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1149,
+                  "scope": 1147,
                   "src": "396:14:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2138,7 +2138,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1054,
+                    "id": 1052,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "396:4:7",
@@ -2152,10 +2152,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1057,
+                  "id": 1055,
                   "name": "_targetId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1149,
+                  "scope": 1147,
                   "src": "412:14:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2164,7 +2164,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1056,
+                    "id": 1054,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "412:4:7",
@@ -2180,19 +2180,19 @@
               "src": "395:32:7"
             },
             "returnParameters": {
-              "id": 1062,
+              "id": 1060,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "460:0:7"
             },
-            "scope": 1150,
+            "scope": 1148,
             "src": "380:728:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1151,
+        "scope": 1149,
         "src": "67:1044:7"
       }
     ],
@@ -2202,14 +2202,14 @@
     "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/zombieattack.sol",
     "exportedSymbols": {
       "ZombieAttack": [
-        1150
+        1148
       ]
     },
-    "id": 1151,
+    "id": 1149,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1015,
+        "id": 1013,
         "literals": [
           "solidity",
           ">=",
@@ -2225,10 +2225,10 @@
       {
         "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/zombiehelper.sol",
         "file": "./zombiehelper.sol",
-        "id": 1016,
+        "id": 1014,
         "nodeType": "ImportDirective",
-        "scope": 1151,
-        "sourceUnit": 1705,
+        "scope": 1149,
+        "sourceUnit": 1703,
         "src": "35:28:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2239,47 +2239,47 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1017,
+              "id": 1015,
               "name": "ZombieHelper",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1704,
+              "referencedDeclaration": 1702,
               "src": "92:12:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ZombieHelper_$1704",
+                "typeIdentifier": "t_contract$_ZombieHelper_$1702",
                 "typeString": "contract ZombieHelper"
               }
             },
-            "id": 1018,
+            "id": 1016,
             "nodeType": "InheritanceSpecifier",
             "src": "92:12:7"
           }
         ],
         "contractDependencies": [
-          723,
-          1320,
-          1516,
-          1704
+          721,
+          1318,
+          1514,
+          1702
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1150,
+        "id": 1148,
         "linearizedBaseContracts": [
-          1150,
-          1704,
-          1516,
-          1320,
-          723
+          1148,
+          1702,
+          1514,
+          1318,
+          721
         ],
         "name": "ZombieAttack",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1021,
+            "id": 1019,
             "name": "randNonce",
             "nodeType": "VariableDeclaration",
-            "scope": 1150,
+            "scope": 1148,
             "src": "112:18:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2288,7 +2288,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1019,
+              "id": 1017,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "112:4:7",
@@ -2300,7 +2300,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 1020,
+              "id": 1018,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2319,10 +2319,10 @@
           },
           {
             "constant": false,
-            "id": 1024,
+            "id": 1022,
             "name": "attackVictoryProbability",
             "nodeType": "VariableDeclaration",
-            "scope": 1150,
+            "scope": 1148,
             "src": "137:34:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2331,7 +2331,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1022,
+              "id": 1020,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "137:4:7",
@@ -2343,7 +2343,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3730",
-              "id": 1023,
+              "id": 1021,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2362,25 +2362,25 @@
           },
           {
             "body": {
-              "id": 1052,
+              "id": 1050,
               "nodeType": "Block",
               "src": "235:137:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1036,
+                    "id": 1034,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1031,
+                      "id": 1029,
                       "name": "randNonce",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1021,
+                      "referencedDeclaration": 1019,
                       "src": "246:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2395,7 +2395,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 1034,
+                          "id": 1032,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2420,32 +2420,32 @@
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1032,
+                          "id": 1030,
                           "name": "randNonce",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1021,
+                          "referencedDeclaration": 1019,
                           "src": "258:9:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "id": 1033,
+                        "id": 1031,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 820,
+                        "referencedDeclaration": 818,
                         "src": "258:13:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
                           "typeString": "function (uint256,uint256) pure returns (uint256)"
                         }
                       },
-                      "id": 1035,
+                      "id": 1033,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2465,7 +2465,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1037,
+                  "id": 1035,
                   "nodeType": "ExpressionStatement",
                   "src": "246:28:7"
                 },
@@ -2476,7 +2476,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1050,
+                    "id": 1048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2492,11 +2492,11 @@
                               "arguments": [
                                 {
                                   "argumentTypes": null,
-                                  "id": 1042,
+                                  "id": 1040,
                                   "name": "now",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1864,
+                                  "referencedDeclaration": 1862,
                                   "src": "324:3:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -2507,18 +2507,18 @@
                                   "argumentTypes": null,
                                   "expression": {
                                     "argumentTypes": null,
-                                    "id": 1043,
+                                    "id": 1041,
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 1862,
+                                    "referencedDeclaration": 1860,
                                     "src": "329:3:7",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
                                       "typeString": "msg"
                                     }
                                   },
-                                  "id": 1044,
+                                  "id": 1042,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -2534,11 +2534,11 @@
                                 },
                                 {
                                   "argumentTypes": null,
-                                  "id": 1045,
+                                  "id": 1043,
                                   "name": "randNonce",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1021,
+                                  "referencedDeclaration": 1019,
                                   "src": "341:9:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -2563,18 +2563,18 @@
                                 ],
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1040,
+                                  "id": 1038,
                                   "name": "abi",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1849,
+                                  "referencedDeclaration": 1847,
                                   "src": "307:3:7",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_abi",
                                     "typeString": "abi"
                                   }
                                 },
-                                "id": 1041,
+                                "id": 1039,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -2588,7 +2588,7 @@
                                   "typeString": "function () pure returns (bytes memory)"
                                 }
                               },
-                              "id": 1046,
+                              "id": 1044,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -2610,18 +2610,18 @@
                                 "typeString": "bytes memory"
                               }
                             ],
-                            "id": 1039,
+                            "id": 1037,
                             "name": "keccak256",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1856,
+                            "referencedDeclaration": 1854,
                             "src": "297:9:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
                               "typeString": "function (bytes memory) pure returns (bytes32)"
                             }
                           },
-                          "id": 1047,
+                          "id": 1045,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2643,7 +2643,7 @@
                             "typeString": "bytes32"
                           }
                         ],
-                        "id": 1038,
+                        "id": 1036,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2656,7 +2656,7 @@
                         },
                         "typeName": "uint"
                       },
-                      "id": 1048,
+                      "id": 1046,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2674,11 +2674,11 @@
                     "operator": "%",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1049,
+                      "id": 1047,
                       "name": "_modulus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1026,
+                      "referencedDeclaration": 1024,
                       "src": "356:8:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2691,30 +2691,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1030,
-                  "id": 1051,
+                  "functionReturnParameters": 1028,
+                  "id": 1049,
                   "nodeType": "Return",
                   "src": "285:79:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1053,
+            "id": 1051,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randMod",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1027,
+              "id": 1025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1026,
+                  "id": 1024,
                   "name": "_modulus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1053,
+                  "scope": 1051,
                   "src": "197:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2723,7 +2723,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1025,
+                    "id": 1023,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:4:7",
@@ -2739,15 +2739,15 @@
               "src": "196:15:7"
             },
             "returnParameters": {
-              "id": 1030,
+              "id": 1028,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1029,
+                  "id": 1027,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1053,
+                  "scope": 1051,
                   "src": "229:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2756,7 +2756,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1028,
+                    "id": 1026,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "229:4:7",
@@ -2771,7 +2771,7 @@
               ],
               "src": "228:6:7"
             },
-            "scope": 1150,
+            "scope": 1148,
             "src": "180:192:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2779,37 +2779,37 @@
           },
           {
             "body": {
-              "id": 1148,
+              "id": 1146,
               "nodeType": "Block",
               "src": "460:648:7",
               "statements": [
                 {
                   "assignments": [
-                    1064
+                    1062
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1064,
+                      "id": 1062,
                       "name": "myZombie",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "471:23:7",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                        "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                         "typeString": "struct ZombieFactory.Zombie"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1063,
+                        "id": 1061,
                         "name": "Zombie",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1197,
+                        "referencedDeclaration": 1195,
                         "src": "471:6:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                           "typeString": "struct ZombieFactory.Zombie"
                         }
                       },
@@ -2817,30 +2817,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1068,
+                  "id": 1066,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1065,
+                      "id": 1063,
                       "name": "zombies",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1200,
+                      "referencedDeclaration": 1198,
                       "src": "497:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1197_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1195_storage_$dyn_storage",
                         "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                       }
                     },
-                    "id": 1067,
+                    "id": 1065,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1066,
+                      "id": 1064,
                       "name": "_zombieId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1055,
+                      "referencedDeclaration": 1053,
                       "src": "505:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2854,7 +2854,7 @@
                     "nodeType": "IndexAccess",
                     "src": "497:18:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Zombie_$1197_storage",
+                      "typeIdentifier": "t_struct$_Zombie_$1195_storage",
                       "typeString": "struct ZombieFactory.Zombie storage ref"
                     }
                   },
@@ -2863,31 +2863,31 @@
                 },
                 {
                   "assignments": [
-                    1070
+                    1068
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1070,
+                      "id": 1068,
                       "name": "enemyZombie",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "526:26:7",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                        "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                         "typeString": "struct ZombieFactory.Zombie"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1069,
+                        "id": 1067,
                         "name": "Zombie",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1197,
+                        "referencedDeclaration": 1195,
                         "src": "526:6:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                          "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                           "typeString": "struct ZombieFactory.Zombie"
                         }
                       },
@@ -2895,30 +2895,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1074,
+                  "id": 1072,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1071,
+                      "id": 1069,
                       "name": "zombies",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1200,
+                      "referencedDeclaration": 1198,
                       "src": "555:7:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1197_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Zombie_$1195_storage_$dyn_storage",
                         "typeString": "struct ZombieFactory.Zombie storage ref[] storage ref"
                       }
                     },
-                    "id": 1073,
+                    "id": 1071,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1072,
+                      "id": 1070,
                       "name": "_targetId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1057,
+                      "referencedDeclaration": 1055,
                       "src": "563:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2932,7 +2932,7 @@
                     "nodeType": "IndexAccess",
                     "src": "555:18:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Zombie_$1197_storage",
+                      "typeIdentifier": "t_struct$_Zombie_$1195_storage",
                       "typeString": "struct ZombieFactory.Zombie storage ref"
                     }
                   },
@@ -2941,15 +2941,15 @@
                 },
                 {
                   "assignments": [
-                    1076
+                    1074
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1076,
+                      "id": 1074,
                       "name": "rand",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1148,
+                      "scope": 1146,
                       "src": "584:9:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2958,7 +2958,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1075,
+                        "id": 1073,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "584:4:7",
@@ -2971,14 +2971,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1080,
+                  "id": 1078,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "hexValue": "313030",
-                        "id": 1078,
+                        "id": 1076,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3001,18 +3001,18 @@
                           "typeString": "int_const 100"
                         }
                       ],
-                      "id": 1077,
+                      "id": 1075,
                       "name": "randMod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1053,
+                      "referencedDeclaration": 1051,
                       "src": "596:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$_t_uint256_$",
                         "typeString": "function (uint256) returns (uint256)"
                       }
                     },
-                    "id": 1079,
+                    "id": 1077,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3036,18 +3036,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1083,
+                    "id": 1081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1081,
+                      "id": 1079,
                       "name": "rand",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1076,
+                      "referencedDeclaration": 1074,
                       "src": "623:4:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3058,11 +3058,11 @@
                     "operator": "<=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1082,
+                      "id": 1080,
                       "name": "attackVictoryProbability",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1024,
+                      "referencedDeclaration": 1022,
                       "src": "631:24:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3076,14 +3076,14 @@
                     }
                   },
                   "falseBody": {
-                    "id": 1146,
+                    "id": 1144,
                     "nodeType": "Block",
                     "src": "922:179:7",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1130,
+                          "id": 1128,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3092,25 +3092,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1122,
+                              "id": 1120,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "937:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1124,
+                            "id": 1122,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "lossCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1196,
+                            "referencedDeclaration": 1194,
                             "src": "937:18:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -3125,7 +3125,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1128,
+                                "id": 1126,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3152,46 +3152,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1125,
+                                  "id": 1123,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "958:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1126,
+                                "id": 1124,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "lossCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1196,
+                                "referencedDeclaration": 1194,
                                 "src": "958:18:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1127,
+                              "id": 1125,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "958:22:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1129,
+                            "id": 1127,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3211,14 +3211,14 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1131,
+                        "id": 1129,
                         "nodeType": "ExpressionStatement",
                         "src": "937:46:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1140,
+                          "id": 1138,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3227,25 +3227,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1132,
+                              "id": 1130,
                               "name": "enemyZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1070,
+                              "referencedDeclaration": 1068,
                               "src": "998:11:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1134,
+                            "id": 1132,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "winCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1194,
+                            "referencedDeclaration": 1192,
                             "src": "998:20:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -3260,7 +3260,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1138,
+                                "id": 1136,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3287,46 +3287,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1135,
+                                  "id": 1133,
                                   "name": "enemyZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1070,
+                                  "referencedDeclaration": 1068,
                                   "src": "1021:11:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1136,
+                                "id": 1134,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "winCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1194,
+                                "referencedDeclaration": 1192,
                                 "src": "1021:20:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1137,
+                              "id": 1135,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "1021:24:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1139,
+                            "id": 1137,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3346,7 +3346,7 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1141,
+                        "id": 1139,
                         "nodeType": "ExpressionStatement",
                         "src": "998:50:7"
                       },
@@ -3356,14 +3356,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1143,
+                              "id": 1141,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "1080:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             }
@@ -3371,22 +3371,22 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             ],
-                            "id": 1142,
+                            "id": 1140,
                             "name": "_triggerCooldown",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1398,
+                            "referencedDeclaration": 1396,
                             "src": "1063:16:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Zombie_$1197_storage_ptr_$returns$__$",
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Zombie_$1195_storage_ptr_$returns$__$",
                               "typeString": "function (struct ZombieFactory.Zombie storage pointer)"
                             }
                           },
-                          "id": 1144,
+                          "id": 1142,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3400,24 +3400,24 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1145,
+                        "id": 1143,
                         "nodeType": "ExpressionStatement",
                         "src": "1063:26:7"
                       }
                     ]
                   },
-                  "id": 1147,
+                  "id": 1145,
                   "nodeType": "IfStatement",
                   "src": "619:482:7",
                   "trueBody": {
-                    "id": 1121,
+                    "id": 1119,
                     "nodeType": "Block",
                     "src": "657:259:7",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1092,
+                          "id": 1090,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3426,25 +3426,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1084,
+                              "id": 1082,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "672:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1086,
+                            "id": 1084,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "winCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1194,
+                            "referencedDeclaration": 1192,
                             "src": "672:17:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -3459,7 +3459,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1090,
+                                "id": 1088,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3486,46 +3486,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1087,
+                                  "id": 1085,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "692:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1088,
+                                "id": 1086,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "winCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1194,
+                                "referencedDeclaration": 1192,
                                 "src": "692:17:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1089,
+                              "id": 1087,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "692:21:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1091,
+                            "id": 1089,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3545,14 +3545,14 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1093,
+                        "id": 1091,
                         "nodeType": "ExpressionStatement",
                         "src": "672:44:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1102,
+                          "id": 1100,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3561,25 +3561,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1094,
+                              "id": 1092,
                               "name": "myZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1062,
                               "src": "731:8:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1096,
+                            "id": 1094,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "level",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1190,
+                            "referencedDeclaration": 1188,
                             "src": "731:14:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint32",
@@ -3594,7 +3594,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1100,
+                                "id": 1098,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3621,46 +3621,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1097,
+                                  "id": 1095,
                                   "name": "myZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1064,
+                                  "referencedDeclaration": 1062,
                                   "src": "748:8:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1098,
+                                "id": 1096,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "level",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1190,
+                                "referencedDeclaration": 1188,
                                 "src": "748:14:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint32",
                                   "typeString": "uint32"
                                 }
                               },
-                              "id": 1099,
+                              "id": 1097,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 916,
+                              "referencedDeclaration": 914,
                               "src": "748:18:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint32_$_t_uint32_$returns$_t_uint32_$bound_to$_t_uint32_$",
                                 "typeString": "function (uint32,uint32) pure returns (uint32)"
                               }
                             },
-                            "id": 1101,
+                            "id": 1099,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3680,14 +3680,14 @@
                             "typeString": "uint32"
                           }
                         },
-                        "id": 1103,
+                        "id": 1101,
                         "nodeType": "ExpressionStatement",
                         "src": "731:38:7"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1112,
+                          "id": 1110,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3696,25 +3696,25 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1104,
+                              "id": 1102,
                               "name": "enemyZombie",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1070,
+                              "referencedDeclaration": 1068,
                               "src": "784:11:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                 "typeString": "struct ZombieFactory.Zombie storage pointer"
                               }
                             },
-                            "id": 1106,
+                            "id": 1104,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": true,
                             "memberName": "lossCount",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1196,
+                            "referencedDeclaration": 1194,
                             "src": "784:21:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint16",
@@ -3729,7 +3729,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "31",
-                                "id": 1110,
+                                "id": 1108,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3756,46 +3756,46 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 1107,
+                                  "id": 1105,
                                   "name": "enemyZombie",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 1070,
+                                  "referencedDeclaration": 1068,
                                   "src": "808:11:7",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                    "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                     "typeString": "struct ZombieFactory.Zombie storage pointer"
                                   }
                                 },
-                                "id": 1108,
+                                "id": 1106,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "lossCount",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 1196,
+                                "referencedDeclaration": 1194,
                                 "src": "808:21:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint16",
                                   "typeString": "uint16"
                                 }
                               },
-                              "id": 1109,
+                              "id": 1107,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1012,
+                              "referencedDeclaration": 1010,
                               "src": "808:25:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint16_$_t_uint16_$returns$_t_uint16_$bound_to$_t_uint16_$",
                                 "typeString": "function (uint16,uint16) pure returns (uint16)"
                               }
                             },
-                            "id": 1111,
+                            "id": 1109,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3815,7 +3815,7 @@
                             "typeString": "uint16"
                           }
                         },
-                        "id": 1113,
+                        "id": 1111,
                         "nodeType": "ExpressionStatement",
                         "src": "784:52:7"
                       },
@@ -3825,11 +3825,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1115,
+                              "id": 1113,
                               "name": "_zombieId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1055,
+                              "referencedDeclaration": 1053,
                               "src": "867:9:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -3840,25 +3840,25 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 1116,
+                                "id": 1114,
                                 "name": "enemyZombie",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1070,
+                                "referencedDeclaration": 1068,
                                 "src": "878:11:7",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Zombie_$1197_storage_ptr",
+                                  "typeIdentifier": "t_struct$_Zombie_$1195_storage_ptr",
                                   "typeString": "struct ZombieFactory.Zombie storage pointer"
                                 }
                               },
-                              "id": 1117,
+                              "id": 1115,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "dna",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1188,
+                              "referencedDeclaration": 1186,
                               "src": "878:15:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -3868,7 +3868,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "7a6f6d626965",
-                              "id": 1118,
+                              "id": 1116,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3899,18 +3899,18 @@
                                 "typeString": "literal_string \"zombie\""
                               }
                             ],
-                            "id": 1114,
+                            "id": 1112,
                             "name": "feedAndMultiply",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1487,
+                            "referencedDeclaration": 1485,
                             "src": "851:15:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
                               "typeString": "function (uint256,uint256,string memory)"
                             }
                           },
-                          "id": 1119,
+                          "id": 1117,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3924,7 +3924,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1120,
+                        "id": 1118,
                         "nodeType": "ExpressionStatement",
                         "src": "851:53:7"
                       }
@@ -3934,7 +3934,7 @@
               ]
             },
             "documentation": null,
-            "id": 1149,
+            "id": 1147,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -3942,11 +3942,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1060,
+                    "id": 1058,
                     "name": "_zombieId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1055,
+                    "referencedDeclaration": 1053,
                     "src": "449:9:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -3954,14 +3954,14 @@
                     }
                   }
                 ],
-                "id": 1061,
+                "id": 1059,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1059,
+                  "id": 1057,
                   "name": "onlyOwnerOf",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1368,
+                  "referencedDeclaration": 1366,
                   "src": "437:11:7",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -3975,15 +3975,15 @@
             "name": "attack",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1058,
+              "id": 1056,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1055,
+                  "id": 1053,
                   "name": "_zombieId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1149,
+                  "scope": 1147,
                   "src": "396:14:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3992,7 +3992,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1054,
+                    "id": 1052,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "396:4:7",
@@ -4006,10 +4006,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1057,
+                  "id": 1055,
                   "name": "_targetId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1149,
+                  "scope": 1147,
                   "src": "412:14:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4018,7 +4018,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1056,
+                    "id": 1054,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "412:4:7",
@@ -4034,19 +4034,19 @@
               "src": "395:32:7"
             },
             "returnParameters": {
-              "id": 1062,
+              "id": 1060,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "460:0:7"
             },
-            "scope": 1150,
+            "scope": 1148,
             "src": "380:728:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1151,
+        "scope": 1149,
         "src": "67:1044:7"
       }
     ],
@@ -4058,7 +4058,7 @@
   },
   "networks": {},
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-03T01:49:54.711Z",
+  "updatedAt": "2020-05-03T21:56:47.118Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

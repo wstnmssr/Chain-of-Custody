@@ -122,7 +122,7 @@ contract Case is ChainOfCustody {
         return storage_log[_item_number][storage_log[_item_number].length-1];
     }
     
-    function get_evidence(uint _item_number) only_authorized public view returns (Evidence memory) {
+    function get_evidence(uint _item_number) public view returns (Evidence memory) {
         return id_to_evidence[_item_number];
     }
     
