@@ -9,13 +9,12 @@ contract ChainOfCustody {
     uint creation_time; //UNIX timestamp
     address internal case_owner; //the only account that can add or remove authorized agents, also used as holder for "checked in" evidence
     mapping(address => bool) internal authorized_agents;
-    mapping(address => bool) internal authorizers;
 
     uint number_of_items = 0;
     mapping (uint => Evidence) internal id_to_evidence; //item number => Evidence
-
     mapping (uint => address) internal evidence_holder; //item number => owner address
-
+    mapping (address => uint) internal userEvidenceCount; //owner address=> number of evidence taken out
+    
     Case_Info case_info;
     
     mapping(uint => Check_Out[]) storage_log;
@@ -49,14 +48,9 @@ contract ChainOfCustody {
         uint time_checked_in;
         bool checked_in; //states whether or not evidence has been returned to locker
     }
-    
-    modifier only_owner(){
-        require(case_owner == msg.sender);
-        _;
-    }
 
-    modifier only_authorizers(){
-        require(authorizers[msg.sender]);
+    modifier only_owner(){
+        require(msg.sender == case_owner);
         _;
     }
 
