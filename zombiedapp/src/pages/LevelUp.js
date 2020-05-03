@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Button, Header, Icon, Form, Message } from "semantic-ui-react";
-import ZombieCard from "../components/zombieCard";
+import EvidenceCard from "../components/evidenceCard";
 
 function mapStateToProps(state) {
   return {
@@ -72,7 +72,7 @@ class FeedOnKitty extends Component {
         <table>
           <tr>
             <th>
-              <ZombieCard
+              <EvidenceCard
                 zombieId={this.state.zombieId}
                 zombieName={this.props.location.state.zombieName}
                 zombieDNA={this.props.location.state.zombieDNA}

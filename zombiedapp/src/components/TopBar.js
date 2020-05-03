@@ -2,16 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { Menu, Header } from "semantic-ui-react";
-import { Dropdown } from "semantic-ui-react";
-
-import CreateZombie from "./LogNewEvidence";
+import { Dropdown, Header, Menu } from "semantic-ui-react";
 
 function mapStateToProps(state) {
   return {
     userAddress: state.userAddress,
-    userZombieCount: state.userZombieCount,
-    totalZombieCount: state.totalZombieCount
+    userEvidenceCount: state.userEvidenceCount,
+    totalEvidenceCount: state.totalEvidenceCount
   };
 }
 
@@ -30,7 +27,7 @@ class TopBar extends Component {
         <Menu inverted fixed='top' style={{ backgroundColor: '#263c4a' }}>
           <Menu.Item as='a'>
             <Link to={{ pathname: '/' }}>
-              <Header inverted size='small'>🕵️ BlockChain of Custody</Header>
+              <Header inverted size='small'>🕵️ Block-Chain of Custody</Header>
             </Link>
           </Menu.Item>
 
@@ -43,13 +40,13 @@ class TopBar extends Component {
               </Dropdown.Item>
 
               <Dropdown.Item>
-                <Link to={{ pathname: "/myZombieInventory" }} >
+                <Link to={{ pathname: "/myEvidenceHoldings" }} >
                   <Header  style={{fontSize:'1em', fontWeight: 'normal'}}> Evidence I Hold </Header>
                 </Link>
               </Dropdown.Item>
 
               <Dropdown.Item>
-                <Link to={{ pathname: "/ZombieInventory" }}>
+                <Link to={{ pathname: "/AllEvidence" }}>
                   <Header style={{fontSize:'1em', fontWeight: 'normal'}}> All Evidence </Header>
                 </Link>
               </Dropdown.Item>
@@ -65,7 +62,7 @@ class TopBar extends Component {
           <Menu.Item position="right" >
             Your account address: {this.props.userAddress}
             <br />
-            You hold {this.props.userZombieCount} piece(s) of evidence out of a total of approximately {this.props.totalZombieCount}.
+            You hold {this.props.userEvidenceCount} piece(s) of evidence out of a total of approximately {this.props.totalEvidenceCount}.
           </Menu.Item>
         </Menu>
       </div>

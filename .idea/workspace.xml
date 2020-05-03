@@ -102,7 +102,7 @@
       <workItem from="1585268352556" duration="28200000" />
       <workItem from="1585438682794" duration="630000" />
       <workItem from="1587865184942" duration="1028000" />
-      <workItem from="1587866245051" duration="50579000" />
+      <workItem from="1587866245051" duration="61915000" />
     </task>
     <servers />
   </component>
@@ -135,11 +135,6 @@
           <url>file://$PROJECT_DIR$/zombiedapp/src/pages/FeedOnKitty.js</url>
           <line>31</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/zombiedapp/src/components/zombieCardContent.js</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

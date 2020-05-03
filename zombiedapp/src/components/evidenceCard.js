@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Icon, Card, Header, Modal, Button } from "semantic-ui-react";
 import ReactTooltip from "react-tooltip";
 import ActionButton from "./ActionButton";
-import ZombieCardContent from "./zombieCardContent";
+import EvidenceCardContent from "./evidenceCardContent";
 
-class ZombieCard extends Component {
+class EvidenceCard extends Component {
   state = {
     modalOpen: false
   };
@@ -64,7 +64,7 @@ class ZombieCard extends Component {
             data-tip="Click on me to view actions for this zombie"
             onClick={e => this.modalOpen(e)}
           >
-            <ZombieCardContent zombie={this.props} />
+            <EvidenceCardContent zombie={this.props} />
           </a>
 
           {/* a modal is like an "alert", it's a popup that greys out the lower screen and displays its content on top of everything */}
@@ -114,10 +114,10 @@ class ZombieCard extends Component {
     else
       return (
         <Card style={{ backgroundColor: "LavenderBlush" }}>
-          <ZombieCardContent zombie={this.props} />
+          <EvidenceCardContent zombie={this.props} />
         </Card>
       );
   }
 }
 
-export default ZombieCard;
+export default EvidenceCard;

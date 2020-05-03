@@ -15,7 +15,7 @@
 
 const WEB3_INITIALIZED = "WEB3_INITIALIZED";
 const BLOCKCHAIN_INITIALIZED = "BLOCKCHAIN_INITIALIZED";
-const ZOMBIE_COUNT = "ZOMBIE_COUNT";
+const EVIDENCE_COUNT = "EVIDENCE_COUNT";
 
 //  Actions and Action Creator Functions
 //
@@ -49,10 +49,10 @@ export function blockchainInitialized(data) {
 
 const initialState = {
   web3Instance: null,
-  CZ: {}, // contract instance with methods, etc.
+  CoC: {}, // contract instance with methods, etc.
   userAddress: "",
-  userZombieCount: 0,
-  totalZombieCount: 0
+  userEvidenceCount: 0,
+  totalEvidenceCount: 0
 };
 
 // Reducers
@@ -78,15 +78,15 @@ export default function reducer(state = initialState, action) {
 
     case BLOCKCHAIN_INITIALIZED:
       return Object.assign({}, state, {
-        CZ: action.payload.CZ,
+        CoC: action.payload.CoC,
         userAddress: action.payload.userAddress,
-        userZombieCount: action.payload.userZombieCount
+        userEvidenceCount: action.payload.userEvidenceCount
       });
 
-    case ZOMBIE_COUNT:
+    case EVIDENCE_COUNT:
       return Object.assign({}, state, {
-        totalZombieCount: action.payload.totalZombieCount,
-        userZombieCount: action.payload.userZombieCount
+        totalEvidenceCount: action.payload.totalEvidenceCount,
+        userEvidenceCount: action.payload.userEvidenceCount
       });
 
     default:

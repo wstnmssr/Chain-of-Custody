@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getZombieCount from "../utils/getZombieCount";
+import getEvidenceCount from "../utils/getEvidenceCount";
 import { connect } from "react-redux";
 
 import { Button, Header, Icon, Modal, Form, Message } from "semantic-ui-react";
@@ -45,7 +45,7 @@ class LogNewEvidence extends Component {
         loading: false,
         message: "You have created a New Zombie"
       });
-      getZombieCount(this.props.CZ, this.props.userAddress);
+      getEvidenceCount(this.props.CZ, this.props.userAddress);
     } catch (err) {
       this.setState({
         loading: false,

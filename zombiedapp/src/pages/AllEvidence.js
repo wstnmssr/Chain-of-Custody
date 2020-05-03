@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-import {
-  Card,
-  Grid,
-  Input,
-  Segment,
-  Pagination,
-} from "semantic-ui-react";
+import { Card, Grid, Input, Segment, Pagination} from "semantic-ui-react";
 import { connect } from "react-redux";
 
-import ZombieCard from "../components/zombieCard";
+import EvidenceCard from "../components/evidenceCard";
 
 function mapStateToProps(state) {
   return {
@@ -18,7 +12,7 @@ function mapStateToProps(state) {
   };
 }
 
-class ZombieInventory extends Component {
+class AllEvidence extends Component {
   state = {
     ZombieTable: [],
     activePage: 1,
@@ -65,7 +59,7 @@ class ZombieInventory extends Component {
     for (let i = 0; i < zList.length; i++) {
       let myDate = new Date(zList[i].readyTime * 1000).toLocaleString();
       zombieTable.push(
-        <ZombieCard
+        <EvidenceCard
           key={i}
           zombieId={this.state.activePage * 9 - 9 + i}
           zombieName={zList[i].name}
@@ -87,7 +81,7 @@ class ZombieInventory extends Component {
       <div>
         <Segment style={{ minHeight:'1em' }} />
         <hr />
-        <h2> Complete Evidence Locker 🗄️</h2>
+        <h2> Complete Evidence Locker </h2>
         The evidence you hold has a yellow background; clicking anywhere on a
         yellow card will bring up a list of actions you can perform.
         <hr />
@@ -121,4 +115,4 @@ class ZombieInventory extends Component {
   }
 }
 
-export default connect(mapStateToProps)(ZombieInventory);
+export default connect(mapStateToProps)(AllEvidence);
