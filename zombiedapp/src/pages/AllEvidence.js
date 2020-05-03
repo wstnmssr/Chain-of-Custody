@@ -89,20 +89,8 @@ class AllEvidence extends Component {
         The evidence you hold has a blue background; evidence available to be checked out has a white background; evidence checked out by someone else has a red background.
         <br />To view more information about a piece of evidence and view related actions, click on the card.
         <hr />
-        <Grid columns={2} verticalAlign="middle">
-          <Grid.Column>
-            <Segment secondary>
-              <div>activePage: {this.state.activePage}</div>
-              <Input
-                min={1}
-                max={this.state.totalPages}
-                onChange={this.handleInputChange}
-                type="range"
-                value={this.state.activePage}
-              />
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
+        <Grid verticalAlign="middle">
+          <Grid.Column align='center' >
             <Pagination
               activePage={this.state.activePage}
               onPageChange={this.onChange}
