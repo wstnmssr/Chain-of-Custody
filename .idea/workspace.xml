@@ -24,11 +24,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/zombiedapp/src/contract_ABI" />
@@ -40,13 +41,6 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/redux" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/public" />
@@ -54,9 +48,16 @@
       <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
+    </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\smonk\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\awhit\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -102,12 +103,13 @@
       <workItem from="1585268352556" duration="28200000" />
       <workItem from="1585438682794" duration="630000" />
       <workItem from="1587865184942" duration="1028000" />
-      <workItem from="1587866245051" duration="78328000" />
+      <workItem from="1587866245051" duration="61915000" />
+      <workItem from="1588539722953" duration="4282000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="92" key="#JavaScript" timestamp="1588348256701">
@@ -118,6 +120,22 @@
       <screen x="1600" y="0" width="1600" height="900" />
     </state>
     <state x="2113" y="253" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.868/1600.0.1600.900@1600.0.1600.900" timestamp="1588469502279" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1588539917954">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588539917954" />
     <state x="239" y="106" key="SettingsEditor" timestamp="1588448307446">
       <screen x="0" y="0" width="1600" height="868" />
     </state>
