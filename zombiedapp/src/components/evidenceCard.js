@@ -27,36 +27,36 @@ class EvidenceCard extends Component {
   render() {
     // define the button labels used in <ActionButton> further on down in the code
 
-    const attackButton = (
-      <div>
-        {" "}
-        Attack Zombie <br /> (70% chance of winning){" "}
-      </div>
-    );
-    const kittyButton = (
-      <div>
-        Eat CryptoKitty <br /> (burp!){" "}
-      </div>
-    );
-    const changeNameButton = (
-      <div>
-        Change Name <br /> (level > 2){" "}
-      </div>
-    );
-    const levelUpButton = (
-      <div>
-        Level Up
-        <br /> (cost = .001 eth){" "}
-      </div>
-    );
+    // const attackButton = (
+    //   <div>
+    //     {" "}
+    //     Attack Zombie <br /> (70% chance of winning){" "}
+    //   </div>
+    // );
+    // const kittyButton = (
+    //   <div>
+    //     Eat CryptoKitty <br /> (burp!){" "}
+    //   </div>
+    // );
+    // const changeNameButton = (
+    //   <div>
+    //     Change Name <br /> (level > 2){" "}
+    //   </div>
+    // );
+    // const levelUpButton = (
+    //   <div>
+    //     Level Up
+    //     <br /> (cost = .001 eth){" "}
+    //   </div>
+    // );
 
     // create the JSX depending on whether you own the zombie or not
 
-    if (this.props.myOwner)
+    if (this.props.myHolder) {
       // Owner zombie: render card and tooltip and modal for zombie actions
-
+      console.log("my ev");
       return (
-        <Card style={{ backgroundColor: "LightYellow" }} raised>
+        <Card style={{ backgroundColor: "LightGreen" }} raised>
           <ReactTooltip delayShow={400} />
 
           <a
@@ -64,7 +64,7 @@ class EvidenceCard extends Component {
             data-tip="Click on me to view actions for this zombie"
             onClick={e => this.modalOpen(e)}
           >
-            <EvidenceCardContent zombie={this.props} />
+            <EvidenceCardContent evidence={this.props} />
           </a>
 
           {/* a modal is like an "alert", it's a popup that greys out the lower screen and displays its content on top of everything */}
@@ -75,33 +75,6 @@ class EvidenceCard extends Component {
               content="These are the actions you can take with your zombie!"
             />
 
-            <Modal.Content>
-              <ActionButton
-                pathname="/AttackZombie"
-                buttonLabel={attackButton}
-                data={this.props}
-              />
-
-              <ActionButton
-                pathname="/FeedOnKitty"
-                buttonLabel={kittyButton}
-                data={this.props}
-              />
-
-              <ActionButton
-                pathname="/ChangeName"
-                buttonLabel={changeNameButton}
-                disableMe={this.props.zombieLevel <= 2}
-                data={this.props}
-              />
-
-              <ActionButton
-                pathname="/LevelUp"
-                buttonLabel={levelUpButton}
-                data={this.props}
-              />
-            </Modal.Content>
-
             <Modal.Actions>
               <Button color="red" onClick={this.handleClose} inverted>
                 <Icon name="cancel" /> Close
@@ -109,14 +82,15 @@ class EvidenceCard extends Component {
             </Modal.Actions>
           </Modal>
         </Card>
-      );
+      ); }
     // someone else's zombie.  just show the card.
-    else
+    else {
+      console.log("ur ev")
       return (
         <Card style={{ backgroundColor: "LavenderBlush" }}>
-          <EvidenceCardContent zombie={this.props} />
+          <EvidenceCardContent evidence={this.props} />
         </Card>
-      );
+      );}
   }
 }
 

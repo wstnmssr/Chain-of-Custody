@@ -26,7 +26,7 @@ class Greeting extends Component {
 
         <Segment style={{ padding: '3em 0em' }} vertical>
           <Header align='center' as='h3' style={{ fontSize: '2em' }}>
-            Digitizing Digital Forensics
+            Digitalizing Digital Forensics
           </Header>
           <p align='center' style={{ fontSize: '1.33em' }}>
             Electronically, securely, and reliabely track your evidence.
