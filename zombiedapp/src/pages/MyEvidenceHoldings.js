@@ -5,7 +5,7 @@ import EvidenceCard from "../components/evidenceCard";
 
 function mapStateToProps(state) {
   return {
-    CZ: state.CZ,
+    CoC: state.CoC,
     userZombieCount: state.userZombieCount,
     userAddress: state.userAddress
   };
@@ -32,8 +32,8 @@ class MyEvidenceHoldings extends Component {
     this.makeZombieCards();
   };
   makeZombieCards = async () => {
-    const myZombies = await this.props.CZ.methods
-      .getZombiesByOwner(this.props.userAddress)
+    const myZombies = await this.props.CoC.methods
+      .getEvidenceByOwner(this.props.userAddress)
       .call();
     let zombieTable = [];
     for (
