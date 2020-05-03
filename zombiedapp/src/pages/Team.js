@@ -70,7 +70,7 @@ class Team extends Component {
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column align='center' width={100}>
+            <Grid.Column align='center' width={16}>
               <Card >
                 <Image src='static/images/france.jpg' wrapped ui={false} />
                 <Card.Content>

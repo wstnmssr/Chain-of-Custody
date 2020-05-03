@@ -85,7 +85,6 @@ class EvidenceCard extends Component {
       ); }
     // someone else's zombie.  just show the card.
     else {
-      console.log("ur ev")
       return (
         <Card style={{ backgroundColor: "LavenderBlush" }}>
           <EvidenceCardContent evidence={this.props} />
