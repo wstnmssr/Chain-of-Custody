@@ -13,7 +13,7 @@ contract ChainOfCustody {
     uint number_of_items = 0;
     mapping (uint => Evidence) internal id_to_evidence; //item number => Evidence
     mapping (uint => address) internal evidence_holder; //item number => owner address
-    mapping (address => uint) internal userEvidenceCount; //owner address=> number of evidence taken out
+    mapping (address => uint) internal userEvidenceCount; //owner address => number of evidence taken out
     
     Case_Info case_info;
     
