@@ -36,7 +36,7 @@ contract ChainOfCustody {
         string condition;
         string notes;
 
-        string status; // e.g. "Checked out by 0x1234"
+        bool checked_in; //states whether or not evidence has been returned to locker
         bool exists; //false by default in mapping if evidence has not been logged (created)
     }
     
