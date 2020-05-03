@@ -1,0 +1,602 @@
+{
+  "contractName": "ChainOfCustodyDeploy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_agent",
+          "type": "address"
+        }
+      ],
+      "name": "authorize_agent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_agent",
+          "type": "address"
+        }
+      ],
+      "name": "authorize_authorizer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        }
+      ],
+      "name": "check_in",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "purpose",
+          "type": "string"
+        }
+      ],
+      "name": "check_out",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_agent",
+          "type": "address"
+        }
+      ],
+      "name": "deauthorize_agent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_agent",
+          "type": "address"
+        }
+      ],
+      "name": "deauthorize_authorizer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        }
+      ],
+      "name": "get_current_check_out",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "personnel",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "authorizer",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "purpose",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time_checked_out",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time_checked_in",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "checked_in",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct ChainOfCustody.Check_Out",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        }
+      ],
+      "name": "get_evidence",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "submitting_agent",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "item_number",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "description_of_evidence",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description_of_offense",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "victim_name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "suspect_name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "phone_number",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "condition",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "notes",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "status",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "exists",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct ChainOfCustody.Evidence",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        }
+      ],
+      "name": "get_storage_log",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "personnel",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "authorizer",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "purpose",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time_checked_out",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time_checked_in",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "checked_in",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct ChainOfCustody.Check_Out[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "item_count",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_submitting_agent",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description_of_evidence",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description_of_offense",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_victim_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_suspect_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_phone_number",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_condition",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_notes",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_status",
+          "type": "string"
+        }
+      ],
+      "name": "log_evidence",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_submitting_agent",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_item_number",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_description_of_evidence",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_description_of_offense",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_victim_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_suspect_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_phone_number",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_condition",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_notes",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_status",
+          "type": "string"
+        }
+      ],
+      "name": "updateEvidence",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_agent\",\"type\":\"address\"}],\"name\":\"authorize_agent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_agent\",\"type\":\"address\"}],\"name\":\"authorize_authorizer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"}],\"name\":\"check_in\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"purpose\",\"type\":\"string\"}],\"name\":\"check_out\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_agent\",\"type\":\"address\"}],\"name\":\"deauthorize_agent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_agent\",\"type\":\"address\"}],\"name\":\"deauthorize_authorizer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"}],\"name\":\"get_current_check_out\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"personnel\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"authorizer\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"purpose\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"time_checked_out\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"time_checked_in\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"checked_in\",\"type\":\"bool\"}],\"internalType\":\"struct ChainOfCustody.Check_Out\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"}],\"name\":\"get_evidence\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"submitting_agent\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"item_number\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"description_of_evidence\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description_of_offense\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"victim_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"suspect_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"phone_number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"condition\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"notes\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"status\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"exists\",\"type\":\"bool\"}],\"internalType\":\"struct ChainOfCustody.Evidence\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"}],\"name\":\"get_storage_log\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"personnel\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"authorizer\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"purpose\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"time_checked_out\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"time_checked_in\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"checked_in\",\"type\":\"bool\"}],\"internalType\":\"struct ChainOfCustody.Check_Out[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"item_count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_submitting_agent\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description_of_evidence\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description_of_offense\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_victim_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_suspect_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_phone_number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_condition\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_notes\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_status\",\"type\":\"string\"}],\"name\":\"log_evidence\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_submitting_agent\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_item_number\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_description_of_evidence\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description_of_offense\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_victim_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_suspect_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_phone_number\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_condition\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_notes\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_status\",\"type\":\"string\"}],\"name\":\"updateEvidence\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/ChainOfCustodyDeploy.sol\":\"ChainOfCustodyDeploy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/ChainOfCustodyDeploy.sol\":{\"keccak256\":\"0x87301f3ff8ab95d007d21374e562c18c8e0d015f4ee62bf12f6c81dea2f7cc01\",\"urls\":[\"bzz-raw://bc9bd5f74e1a2647ab2c8b4e1c711d20cecdbb70a4565b11cc12147da89603f7\",\"dweb:/ipfs/QmPPawT8E7jUv7UhrJUMxgWKPGdgdPftXgveJB9UvAiFAK\"]},\"/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/case.sol\":{\"keccak256\":\"0x0a821cf1c53cf193260b4532d69b45097a560c4661ab0c9aa54362a106c4f85c\",\"urls\":[\"bzz-raw://3d9204e07110b62fea5b5706884f6081061cdde5633c2ce66b40d17788a283ae\",\"dweb:/ipfs/QmZvdRpKWxo9JCKaqKKYxuWiR41P89spowNsjb1t9ZkHEP\"]},\"/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/chainofcustody.sol\":{\"keccak256\":\"0x562723cc34601d24df5ff987f0bd081ede488a8be79c9e27b523b329e8767e12\",\"urls\":[\"bzz-raw://50005c9f191a8bfba63dd7f992e7c1257fcfe06475f180e8dc4f9ced9b5eaaed\",\"dweb:/ipfs/QmbYD11yF8QBnJJEeY85qYsh6qW7tDb2w5ZxdMYB5W8dbC\"]},\"/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/safemath.sol\":{\"keccak256\":\"0xd804ef0f0d99c9ec85b36b8d50c18bec43ebea4f38dc2f14fe1e610344a16035\",\"urls\":[\"bzz-raw://ae21e55a70eb9308348004d2c7b3e41ee11c40e98727eff4bcc91b285ffa7754\",\"dweb:/ipfs/QmYT9REMRCXnddjTm1LF1HHN6GfCSLp2Pvi9CoEXD1ajK4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >= 0.5.0;\r\n\r\npragma experimental ABIEncoderV2;\r\n\r\nimport \"./case.sol\";\r\n\r\ncontract ChainOfCustodyDeploy is Case\r\n{\r\n\r\n}",
+  "sourcePath": "C:\\Users\\smonk\\WebstormProjects\\Chain-of-Custody\\contracts\\ChainOfCustodyDeploy.sol",
+  "ast": {
+    "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/ChainOfCustodyDeploy.sol",
+    "exportedSymbols": {
+      "ChainOfCustodyDeploy": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "29:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/case.sol",
+        "file": "./case.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 7,
+        "sourceUnit": 462,
+        "src": "66:20:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "Case",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 461,
+              "src": "123:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Case_$461",
+                "typeString": "contract Case"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "123:4:0"
+          }
+        ],
+        "contractDependencies": [
+          461,
+          572
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6,
+          461,
+          572
+        ],
+        "name": "ChainOfCustodyDeploy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7,
+        "src": "90:45:0"
+      }
+    ],
+    "src": "0:135:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/ChainOfCustodyDeploy.sol",
+    "exportedSymbols": {
+      "ChainOfCustodyDeploy": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "29:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/smonk/WebstormProjects/Chain-of-Custody/contracts/case.sol",
+        "file": "./case.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 7,
+        "sourceUnit": 462,
+        "src": "66:20:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "Case",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 461,
+              "src": "123:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Case_$461",
+                "typeString": "contract Case"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "123:4:0"
+          }
+        ],
+        "contractDependencies": [
+          461,
+          572
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6,
+          461,
+          572
+        ],
+        "name": "ChainOfCustodyDeploy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7,
+        "src": "90:45:0"
+      }
+    ],
+    "src": "0:135:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-03T01:34:41.598Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
