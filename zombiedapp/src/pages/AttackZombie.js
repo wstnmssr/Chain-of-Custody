@@ -7,8 +7,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Button, Header, Icon, Form, Message } from "semantic-ui-react";
-import ZombieCard from "../components/zombieCard";
-import getZombieCount from "../utils/getZombieCount";
+import EvidenceCard from "../components/evidenceCard";
+import getEvidenceCount from "../utils/getEvidenceCount";
 
 function mapStateToProps(state) {
   return {
@@ -59,7 +59,7 @@ class AttackZombie extends Component {
           loading: false,
           message: "Battle complete.  YOU WON!!!!"
         });
-        getZombieCount(this.props.CZ, this.props.userAddress);
+        getEvidenceCount(this.props.CZ, this.props.userAddress);
       } else {
         this.setState({
           loading: false,
@@ -87,7 +87,7 @@ class AttackZombie extends Component {
         <table>
           <tr>
             <th>
-              <ZombieCard
+              <EvidenceCard
                 zombieId={this.state.zombieId}
                 zombieName={this.props.location.state.zombieName}
                 zombieDNA={this.props.location.state.zombieDNA}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card, Grid, Input, Segment, Pagination } from "semantic-ui-react";
 import { connect } from "react-redux";
-import ZombieCard from "../components/zombieCard";
+import EvidenceCard from "../components/evidenceCard";
 
 function mapStateToProps(state) {
   return {
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
   };
 }
 
-class MyZombieInventory extends Component {
+class MyEvidenceHoldings extends Component {
   state = {
     ZombieTable: [],
     activePage: 1,
@@ -46,7 +46,7 @@ class MyZombieInventory extends Component {
         let zombie = await this.props.CZ.methods.zombies(z).call();
         let myDate = new Date(zombie.readyTime * 1000).toLocaleString();
         zombieTable.push(
-          <ZombieCard
+          <EvidenceCard
             key={z}
             zombieId={z}
             zombieName={zombie.name}
@@ -103,4 +103,4 @@ class MyZombieInventory extends Component {
   }
 }
 
-export default connect(mapStateToProps)(MyZombieInventory);
+export default connect(mapStateToProps)(MyEvidenceHoldings);

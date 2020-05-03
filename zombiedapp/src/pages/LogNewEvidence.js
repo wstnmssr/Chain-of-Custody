@@ -2,18 +2,26 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Button, Header, Icon, Input, Form, Message, Segment, TextArea } from "semantic-ui-react";
-import ZombieCard from "../components/zombieCard";
+// import EvidenceCard from "../components/zombieCard";
 
 function mapStateToProps(state) {
   return {
-    CZ: state.CZ,
+    CoC: state.CoC,
     userAddress: state.userAddress
   };
 }
 
 class LogNewEvidence extends Component {
   state = {
-    value: "",
+    agentName: "",
+    agentPhoneNumber: "",
+    victimName: "",
+    suspectName: "",
+    offenseDescription: "",
+    condition: "",
+    status: "",
+    evidenceDescription: "",
+    notes: "",
     message: "",
     errorMessage: "",
     loading: false,
@@ -32,11 +40,13 @@ class LogNewEvidence extends Component {
     this.setState({
       loading: true,
       errorMessage: "",
-      message: "waiting for blockchain transaction to complete..."
+      message: "Waiting for blockchain transaction to complete..."
     });
     try {
-      await this.props.CZ.methods
-        .changeName(this.state.zombieId, this.state.value) // contains the zombie ID and the new name
+      await this.props.CoC.methods
+        .log_evidence(this.state.agentName, this.state.evidenceDescription, this.state.offenseDescription,
+                      this.state.victimName, this.state.suspectName, this.state.agentPhoneNumber,
+                      this.state.condition, this.state.notes, this.state.status)
         .send({
           from: this.props.userAddress
         });
@@ -57,7 +67,7 @@ class LogNewEvidence extends Component {
     return (
       <div>
       <Segment style={{ minHeight:'1em' }} />
-      *<Header icon="browser" content="Please Provide the Required Information for a New Piece of Evidence" />
+      *<Header icon="browser" content="Please provide the required information for your new piece of evidence." />
       <br />
       <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
 
@@ -67,80 +77,64 @@ class LogNewEvidence extends Component {
             label='Name'
             control={Input}
             placeholder="Name"
-            onChange={event => this.setState({ value: event.target.value })}
+            onChange={event => this.setState({ agentName: event.target.value })}
           />
           <Form.Field
             label='Phone Number'
             control={Input}
             placeholder="X-XXX-XXX-XXXX"
-            onChange={event => this.setState( { value: event.target.value })}
+            onChange={event => this.setState( { agentPhoneNumber: event.target.value })}
           />
         </div>
 
         <h4 class="ui dividing header"> Case Information</h4>
         <div class="two fields">
           <Form.Field
-            label = 'Case Number'
-            control = {Input}
-            placeholder="Case #"
-            onChange={event => this.setState({ value: event.target.value })}
-          />
-          <Form.Field
-            label='Lab Case Number'
-            control={Input}
-            placeholder="Lab Case #"
-            onChange={event => this.setState( { value: event.target.value })}
-          />
-        </div>
-        <div class="two fields">
-          <Form.Field
             label='Victim Name'
             control={Input}
             placeholder="Name"
-            onChange={event => this.setState({ value: event.target.value })}
+            onChange={event => this.setState({ victimName: event.target.value })}
           />
           <Form.Field
             label='Suspect Name'
             control={Input}
             placeholder="Name"
-            onChange={event => this.setState( { value: event.target.value })}
+            onChange={event => this.setState( { suspectName: event.target.value })}
           />
         </div>
         <Form.Field
           label='Offense Description' id='form-textarea-control-opinion'
           control={TextArea}
           placeholder="Description"
-          onChange={event => this.setState( { value: event.target.value })}
+          onChange={event => this.setState( { offenseDescription: event.target.value })}
         />
 
         <h4 class="ui dividing header"> Evidence Information</h4>
           <div class="two fields">
           <Form.Field
-            label = 'Item Number'
+            label = 'Condition'
             control = {Input}
-            placeholder="Item #"
-            width={6}
-            onChange={event => this.setState({ value: event.target.value })}
+            placeholder="Good/Less Than Good"
+            onChange={event => this.setState({ condition: event.target.value })}
           />
           <Form.Field
-            label='Condition'
+            label='Status'
             control={Input}
-            placeholder="Good/Fucked up"
-            width={10}
-            onChange={event => this.setState( { value: event.target.value })}
+            placeholder="Checked In/Out"
+            onChange={event => this.setState( { status: event.target.value })}
           />
         </div>
         <Form.Field
           label='Evidence Description' id='form-textarea-control-opinion'
           control={TextArea}
           placeholder="Description"
-          onChange={event => this.setState( { value: event.target.value })}
+          onChange={event => this.setState( { evidenceDescription: event.target.value })}
         />
         <Form.Field
           label='Notes' id='form-textarea-control-opinion'
           control={TextArea}
           placeholder="Notes"
-          onChange={event => this.setState( { value: event.target.value })}
+          onChange={event => this.setState( { notes: event.target.value })}
         />
 
         <Message error header="Oops!" content={this.state.errorMessage} />
@@ -148,7 +142,7 @@ class LogNewEvidence extends Component {
           <Icon name="check" />
           Submit
         </Button>
-        <Link to="/MyZombieInventory">
+        <Link to="/AllEvidence">
           <Button color="red" inverted>
             <Icon name="cancel" />
             Close

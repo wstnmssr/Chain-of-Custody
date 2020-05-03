@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import getWeb3 from "./utils/getWeb3";
 import initBlockchain from "./utils/initBlockchain";
-import getZombieCount from "./utils/getZombieCount";
+import getEvidenceCount from "./utils/getEvidenceCount";
 
 import { HashRouter, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import { Provider } from "react-redux";
 
+import MyEvidenceHoldings from "./pages/MyEvidenceHoldings";
+import LogNewEvidence from "./pages/LogNewEvidence"
+import AllEvidence from "./pages/AllEvidence";
 import TopBar from "./components/TopBar";
-
 import Greeting from "./pages/Greeting";
-import MyZombieInventory from "./pages/MyZombieInventory";
-import ZombieInventory from "./pages/ZombieInventory";
+import Team from "./pages/Team"
+
 import AttackZombie from "./pages/AttackZombie";
 import FeedOnKitty from "./pages/FeedOnKitty";
 import ChangeName from "./pages/ChangeName";
 import LevelUp from "./pages/LevelUp";
-import LogNewEvidence from "./pages/LogNewEvidence"
-import Team from "./pages/Team"
 
 import store from "./redux/store";
 
@@ -39,7 +39,7 @@ class App extends Component {
     try {
       const web3 = await getWeb3(); // from utils directory;  connect to metamask
       const data = await initBlockchain(web3);  // get contract instance and user address
-      await getZombieCount(data.CZ, data.userAddress);  // get user count and total count of zombies
+      await getEvidenceCount(data.CoC, data.userAddress);  // get user count and total count of zombies
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -67,8 +67,8 @@ class App extends Component {
               <Route exact path="/" component={Greeting} />
               <Route exact path="/Team" component={Team} />
               <Route exact path="/LogNewEvidence" component={LogNewEvidence} />
-              <Route exact path="/myZombieInventory" component={MyZombieInventory} />
-              <Route exact path="/ZombieInventory" component={ZombieInventory} />
+              <Route exact path="/myEvidenceHoldings" component={MyEvidenceHoldings} />
+              <Route exact path="/AllEvidence" component={AllEvidence} />
               {/* routes used in zombie action modal */}
               <Route exact path="/AttackZombie" component={AttackZombie} />
               <Route exact path="/FeedOnKitty" component={FeedOnKitty} />

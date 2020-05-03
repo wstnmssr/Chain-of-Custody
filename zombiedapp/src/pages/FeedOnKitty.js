@@ -6,8 +6,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Button, Icon, Form, Message } from "semantic-ui-react";
-import ZombieCard from "../components/zombieCard";
-import getZombieCount from "../utils/getZombieCount";
+import EvidenceCard from "../components/evidenceCard";
+import getEvidenceCount from "../utils/getEvidenceCount";
 
 function mapStateToProps(state) {
   return {
@@ -62,7 +62,7 @@ class FeedOnKitty extends Component {
         loading: false,
         message: "You have eaten a poor innocent CryptoKitty.   Buuuuurrrrpp!!!"
       });
-      getZombieCount(this.props.CZ, this.props.userAddress);
+      getEvidenceCount(this.props.CZ, this.props.userAddress);
     } catch (err) {
       this.setState({
         loading: false,
@@ -80,7 +80,7 @@ class FeedOnKitty extends Component {
         <table>
           <tr>
             <th>
-              <ZombieCard
+              <EvidenceCard
                 zombieId={this.state.hungryZombieId}
                 zombieName={this.props.location.state.zombieName}
                 zombieDNA={this.props.location.state.zombieDNA}
