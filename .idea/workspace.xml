@@ -17,24 +17,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>callback</find>
-      <find>txStatus</find>
-      <find>purchaser</find>
-      <find>totalZombieCount</find>
-      <find>png</find>
-      <find>shirtClass</find>
-      <find>catMode</find>
-      <find>eye</find>
-      <find>getColor</find>
-      <find>simple</find>
-      <find>console</find>
-      <find>return</find>
-      <find>state</find>
-      <find>jpg</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,15 +37,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/redux" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
@@ -120,7 +102,7 @@
       <workItem from="1585268352556" duration="28200000" />
       <workItem from="1585438682794" duration="630000" />
       <workItem from="1587865184942" duration="1028000" />
-      <workItem from="1587866245051" duration="2014000" />
+      <workItem from="1587866245051" duration="50579000" />
     </task>
     <servers />
   </component>
@@ -128,9 +110,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1839" y="110" key="SettingsEditor" timestamp="1587868263794">
+    <state x="392" y="92" key="#JavaScript" timestamp="1588348256701">
+      <screen x="0" y="0" width="1600" height="868" />
+    </state>
+    <state x="392" y="92" key="#JavaScript/0.0.1600.868/1600.0.1600.900@0.0.1600.868" timestamp="1588348256701" />
+    <state x="2113" y="253" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588469502279">
       <screen x="1600" y="0" width="1600" height="900" />
     </state>
+    <state x="2113" y="253" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.868/1600.0.1600.900@1600.0.1600.900" timestamp="1588469502279" />
+    <state x="239" y="106" key="SettingsEditor" timestamp="1588448307446">
+      <screen x="0" y="0" width="1600" height="868" />
+    </state>
+    <state x="239" y="106" key="SettingsEditor/0.0.1600.868/1600.0.1600.900@0.0.1600.868" timestamp="1588448307446" />
     <state x="1839" y="110" key="SettingsEditor/0.0.1600.868/1600.0.1600.900@1600.0.1600.900" timestamp="1587868263794" />
   </component>
   <component name="XDebuggerManager">

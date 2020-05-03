@@ -65,26 +65,10 @@ class App extends Component {
             <TopBar state={this.state} />
             <div>
               <Route exact path="/" component={Greeting} />
-              <Route
-                exact
-                path="/Team"
-                component={Team}
-              />
-              <Route
-                exact
-                path="/LogNewEvidence"
-                component={LogNewEvidence}
-              />
-              <Route
-                exact
-                path="/myZombieInventory"
-                component={MyZombieInventory}
-              />
-              <Route
-                exact
-                path="/ZombieInventory"
-                component={ZombieInventory}
-              />
+              <Route exact path="/Team" component={Team} />
+              <Route exact path="/LogNewEvidence" component={LogNewEvidence} />
+              <Route exact path="/myZombieInventory" component={MyZombieInventory} />
+              <Route exact path="/ZombieInventory" component={ZombieInventory} />
               {/* routes used in zombie action modal */}
               <Route exact path="/AttackZombie" component={AttackZombie} />
               <Route exact path="/FeedOnKitty" component={FeedOnKitty} />
