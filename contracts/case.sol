@@ -129,4 +129,20 @@ contract Case is ChainOfCustody {
     function get_evidence_count() only_authorized public view returns (uint) {
         return userEvidenceCount[msg.sender];
     }
+
+    function getEvidenceByOwner(address _owner) external view returns(uint[] memory) {
+            uint[] memory result = new uint[](userEvidenceCount[_owner]);
+            uint counter = 0;
+            for (uint i = 0; i < number_of_items; i++) {
+                if (evidence_holder[i] == _owner) {
+                result[counter] = i;
+                counter++;
+                }
+            }
+            return result;
+    }
+
+    function getIfAgentAuthorized(address agent) external view returns(bool) {
+        return authorized_agents[agent];
+    }
 }
