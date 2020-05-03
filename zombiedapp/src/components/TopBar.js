@@ -21,7 +21,6 @@ class TopBar extends Component {
   render() {
     const { children } = this.props
     const { fixed } = this.state
-
     return (
       <div>
         <Menu inverted fixed='top' style={{ backgroundColor: '#263c4a' }}>
