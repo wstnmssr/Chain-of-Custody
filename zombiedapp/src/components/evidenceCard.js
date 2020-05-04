@@ -4,17 +4,25 @@ import ReactTooltip from "react-tooltip";
 import ActionButton from "./ActionButton";
 import EvidenceCardContent from "./evidenceCardContent";
 import DetailsModalContent from "./DetailsModalContent";
+import {Link} from "react-router-dom";
+import CheckIn from "./CheckIn";
+import CheckOut from "./CheckOut";
 
 class EvidenceCard extends Component {
   state = {
-    modalOpen: false
+    detailsModalOpen: false,
+    checkModalOpen: false
   };
 
-  modalOpen() {
-    this.setState({ modalOpen: true });
+  detailsModalOpen() {
+    this.setState({ detailsModalOpen: true });
   }
 
-  handleClose = () => this.setState({ modalOpen: false });
+  checkModalOpen() {
+    this.setState( {checkModalOpen: true})
+  }
+
+  handleClose = () => this.setState({ detailsModalOpen: false, checkModalOpen: false });
 
   truncate = (text, startChars, endChars) => {
     if (text.length > 12) {
@@ -59,15 +67,15 @@ class EvidenceCard extends Component {
           <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
           <Card.Content extra>
-            <Button color="Blue" onClick={e => this.modalOpen(e)}>
+            <Button color="Blue" onClick={e => this.detailsModalOpen(e)}>
               View Details
             </Button>
-            <Button color="Blue" onClick={e => this.modalOpen(e)}>
+            <Button color="Blue" onClick={e => this.checkModalOpen(e)}>
               Check In
             </Button>
           </Card.Content>
 
-          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+          <Modal open={this.state.detailsModalOpen} onClose={this.handleClose}>
             <Header
               icon="browser"
               content="Evidence Details"
@@ -79,6 +87,14 @@ class EvidenceCard extends Component {
               </Button>
             </Modal.Actions>
           </Modal>
+
+        <Modal open={this.state.checkModalOpen} onClose={this.handleClose}>
+          <Header
+            icon="browser"
+            content="Check In"
+          />
+          <CheckIn evidence={this.props} />
+        </Modal>
         </Card>
       ); }
 
@@ -88,14 +104,15 @@ class EvidenceCard extends Component {
             <ReactTooltip delayShow={400} />
             <EvidenceCardContent evidence={this.props} />
             <Card.Content extra>
-              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+              <Button color="LightGrey" onClick={e => this.detailsModalOpen(e)}>
                 View Details
               </Button>
-              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+              <Button color="Blue" onClick={e => this.checkModalOpen(e)}>
                 Check Out
               </Button>
             </Card.Content>
-          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+
+          <Modal open={this.state.detailsModalOpen} onClose={this.handleClose}>
           <Header
             icon="browser"
             content="Evidence Details"
@@ -107,7 +124,24 @@ class EvidenceCard extends Component {
             </Button>
           </Modal.Actions>
         </Modal>
-       </Card>
+
+        <Modal open={this.state.checkModalOpen} onClose={this.handleClose}>
+          <Header
+            icon="browser"
+            content="Check Out"
+          />
+          <CheckOut
+            CoC={this.props.CoC}
+            userAddress={this.props.userAddress}
+            evidence={this.props}
+          />
+          <Modal.Actions>
+            <Button color="red" onClick={this.handleClose} inverted>
+              <Icon name="cancel" /> Close
+            </Button>
+          </Modal.Actions>
+        </Modal>
+      </Card>
       ); }
 
     else {
@@ -116,12 +150,12 @@ class EvidenceCard extends Component {
           <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
           <Card.Content extra>
-            <Button color="DarkRed" onClick={e => this.modalOpen(e)}>
+            <Button color="DarkRed" onClick={e => this.detailsModalOpen(e)}>
               View Details
             </Button>
           </Card.Content>
 
-          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+          <Modal open={this.state.detailsModalOpen} onClose={this.handleClose}>
           <Header
             icon="browser"
             content="Evidence Details"

@@ -49,11 +49,14 @@ class AllEvidence extends Component {
         break;
       }
       try {
-        let myHolder = await this.props.CoC.get_current_check_out(i).call();
-        if (await this.props.CoC.getIfCheckedIn(i).call()) {
+        let checkedIn = await this.props.CoC.methods.getIfCheckedIn(i).call();
+        if (checkedIn) {
           eHolder.push('in');
-        } else {
-          if (myHolder === this.props.userAddress)
+        }
+        else {
+          let myHolder = await this.props.CoC.methods.get_current_check_out(i).call();
+          console.log(myHolder);
+          if (myHolder.personnel === this.props.userAddress)
             eHolder.push('user')
           else
             eHolder.push('out');
@@ -82,6 +85,8 @@ class AllEvidence extends Component {
           condition={eList[i].condition}
           notes={eList[i].notes}
           myHolder={eHolder[i]}
+          CoC={this.props.CoC}
+          userAddress={this.props.userAddress}
         />
       );
     }
