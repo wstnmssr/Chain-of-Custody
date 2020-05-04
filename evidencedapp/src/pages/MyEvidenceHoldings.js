@@ -39,15 +39,14 @@ class MyEvidenceHoldings extends Component {
     await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
 
     for (
-        let i = this.state.activePage * 9 - 9;
-        i < this.state.activePage * 9;
-        i++
+      let i = this.state.activePage * 9 - 9;
+      i < this.state.activePage * 9;
+      i++
     ) {
       try {
         let metaData = await this.props.CoC.methods.get_evidence(i).call();
-        let myHolder = await this.props.CoC.evidence_holder.call(i, function(err,res){
-        });
-        if (myHolder === this.props.userAddress) {
+        let myHolder = await this.props.CoC.methods.get_current_check_out(i).call()
+        if (myHolder.personnel === this.props.userAddress) {
           eList.push(metaData);
         }
         eHolder.push(myHolder);
@@ -73,7 +72,7 @@ class MyEvidenceHoldings extends Component {
       condition={eList[i].condition}
       notes={eList[i].notes}
       status={eList[i].status}
-      myHolder={this.props.userAddress === eHolder[eList[i].item_number]}
+      myHolder={'user'}
       />
     );
     }
@@ -82,16 +81,16 @@ class MyEvidenceHoldings extends Component {
 
   render() {
     return (
-        <div>
-        <Segment style={{ minHeight:'1em' }} />
+      <div>
+      <Segment style={{ minHeight:'1em' }} />
     <hr />
     <h2> Complete Evidence Locker </h2>
     The evidence you hold has a blue background; evidence available to be checked out has a white background; evidence checked out by someone else has a red background.
     <br />To view more information about a piece of evidence and view related actions, click on the card.
     <hr />
     <Grid verticalAlign="middle">
-        <Grid.Column align='center' >
-        <Pagination
+      <Grid.Column align='center' >
+      <Pagination
     activePage={this.state.activePage}
     onPageChange={this.onChange}
     totalPages={this.state.totalPages}
