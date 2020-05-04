@@ -6,105 +6,102 @@ import EvidenceCard from "../components/evidenceCard";
 function mapStateToProps(state) {
   return {
     CoC: state.CoC,
-    totalEvidenceCount: state.totalEvidenceCount,
+    userEvidenceCount: state.userEvidenceCount,
     userAddress: state.userAddress
   };
 }
 
 class MyEvidenceHoldings extends Component {
   state = {
-    evidenceTable: [],
+    EvidenceTable: [],
     activePage: 1,
-    totalPages: Math.ceil(this.props.totalEvidenceCount / 9)
+    totalPages: Math.ceil(this.props.userEvidenceCount / 9)
   };
 
   componentDidMount = async () => {
-    await this.makeEvidenceCards();
+    await this.makeZombieCards();
   };
 
   onChange = async (e, pageInfo) => {
     await this.setState({ activePage: pageInfo.activePage });
-    this.makeEvidenceCards();
+    this.makeZombieCards();
   };
 
   handleInputChange = async (e, { value }) => {
     await this.setState({ activePage: value });
-    this.makeEvidenceCards();
-  }
+    this.makeZombieCards();
+  };
 
-  makeEvidenceCards = async () => {
-
-    let eList = [];
-    let eHolder = [];
-    await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
-
+  makeZombieCards = async () => {
+    const myZombies = await this.props.CoC.methods
+      .getEvidenceByOwner(this.props.userAddress)
+      .call();
+    let zombieTable = [];
     for (
-        let i = this.state.activePage * 9 - 9;
-        i < this.state.activePage * 9;
-        i++
+      var i = this.state.activePage * 9 - 9;
+      i < this.state.activePage * 9;
+      i++
     ) {
       try {
-        let metaData = await this.props.CoC.methods.get_evidence(i).call();
-        let myHolder = await this.props.CoC.evidence_holder.call(i, function(err,res){
-        });
-        if (myHolder === this.props.userAddress) {
-          eList.push(metaData);
-        }
-        eHolder.push(myHolder);
-      } catch (err) {
+        let z = myZombies[i];
+        let zombie = await this.props.CZ.methods.zombies(z).call();
+        let myDate = new Date(zombie.readyTime * 1000).toLocaleString();
+        zombieTable.push(
+          <EvidenceCard
+            key={z}
+            zombieId={z}
+            zombieName={zombie.name}
+            zombieDNA={zombie.dna}
+            zombieLevel={zombie.level}
+            zombieReadyTime={myDate}
+            zombieWinCount={zombie.winCount}
+            zombieLossCount={zombie.lossCount}
+            zombieOwner={this.props.userAddress}
+            myOwner={true}
+          />
+        );
+      } catch {
         break;
       }
     }
-
-    // create a set of zombie cards in the state table
-
-    let evidenceTable = [];
-    for (let i = 0; i < eList.length; i++) {
-      evidenceTable.push(
-      <EvidenceCard
-      key={i}
-      itemNumber={eList[i].item_number}
-      submittingAgent={eList[i].submitting_agent}
-      evidenceDescription={eList[i].description_of_evidence}
-      offenseDescription={eList[i].description_of_offense}
-      victim={eList[i].victim_name}
-      suspect={eList[i].suspect_name}
-      agentPhoneNumber={eList[i].phone_number}
-      condition={eList[i].condition}
-      notes={eList[i].notes}
-      status={eList[i].status}
-      myHolder={this.props.userAddress === eHolder[eList[i].item_number]}
-      />
-    );
-    }
-    this.setState({ evidenceTable });
+    this.setState({ zombieTable });
   };
 
   render() {
     return (
-        <div>
+      <div>
         <Segment style={{ minHeight:'1em' }} />
-    <hr />
-    <h2> Complete Evidence Locker </h2>
-    The evidence you hold has a blue background; evidence available to be checked out has a white background; evidence checked out by someone else has a red background.
-    <br />To view more information about a piece of evidence and view related actions, click on the card.
-    <hr />
-    <Grid verticalAlign="middle">
-        <Grid.Column align='center' >
-        <Pagination
-    activePage={this.state.activePage}
-    onPageChange={this.onChange}
-    totalPages={this.state.totalPages}
-    />
-    </Grid.Column>
-    </Grid>
-    <br /> <br />
-    <div>
-    <Card.Group>{this.state.evidenceTable}</Card.Group>
-    </div>
-    </div>
-  );
+        <hr />
+        <h2> Your Evidence Holdings </h2>
+        The pieces of evidence you hold have a yellow background; clicking anywhere on a
+        yellow card will bring up a list of actions you can perform.
+        <hr />
+        <Grid columns={2} verticalAlign="middle">
+          <Grid.Column>
+            <Segment secondary>
+              <div>activePage: {this.state.activePage}</div>
+              <Input
+                min={1}
+                max={this.state.totalPages}
+                onChange={this.handleInputChange}
+                type="range"
+                value={this.state.activePage}
+              />
+            </Segment>
+          </Grid.Column>
+          <Grid.Column>
+            <Pagination
+              activePage={this.state.activePage}
+              onPageChange={this.onChange}
+              totalPages={this.state.totalPages}
+            />
+          </Grid.Column>
+        </Grid>
+        <br /> <br />
+        <Card.Group> {this.state.zombieTable} </Card.Group>
+      </div>
+    );
   }
 }
 
-export default connect(mapStateToProps)(AllEvidence);
+export default connect(mapStateToProps)(MyEvidenceHoldings);
