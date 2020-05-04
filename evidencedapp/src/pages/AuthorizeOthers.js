@@ -90,17 +90,15 @@ class AuthorizeOthers extends Component {
           <Form.Field
             control={Input}
             placeholder="Address on Ethereum"
-            onChange={event => this.setState({ agentName: event.target.value })}
+            onChange={event => this.setState({ authorizedAgent: event.target.value })}
           />
         </div>
 
         <Message error header="Oops!" content={this.state.errorMessage} />
-        <Link to="/">
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
         </Button>
-        </Link>
 
         <hr />
         <h2>{this.state.message}</h2>
@@ -113,17 +111,15 @@ class AuthorizeOthers extends Component {
         <Form.Field
             control={Input}
             placeholder="Address on Ethereum"
-            onChange={event => this.setState({ victimName: event.target.value })}
+            onChange={event => this.setState({ deauthorizedAgent: event.target.value })}
         />
         </div>
 
 
         <Message error header="Oops!" content={this.state.errorMessage} />
-        <Link to="/">
             <Button primary type="submit" loading={this.state.loading}>
             <Icon name="check" /> Submit
             </Button>
-        </Link>
 
         <hr />
         <h2>{this.state.message}</h2>
