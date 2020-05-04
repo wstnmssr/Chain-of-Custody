@@ -5,39 +5,39 @@ import { connect } from "react-redux";
 import EvidenceCard from "../components/evidenceCard";
 
 function mapStateToProps(state) {
-  return {
-    CoC: state.CoC,
-    totalEvidenceCount: state.totalEvidenceCount,
-    userAddress: state.userAddress
-  };
+    return {
+        CoC: state.CoC,
+        totalEvidenceCount: state.totalEvidenceCount,
+        userAddress: state.userAddress
+    };
 }
 
 class AllEvidence extends Component {
-  state = {
-    evidenceTable: [],
-    activePage: 1,
-    totalPages: Math.ceil(this.props.totalEvidenceCount / 9)
-  };
+    state = {
+        evidenceTable: [],
+        activePage: 1,
+        totalPages: Math.ceil(this.props.totalEvidenceCount / 9)
+    };
 
-  componentDidMount = async () => {
-    await this.makeEvidenceCards();
-  };
+    componentDidMount = async () => {
+        await this.makeEvidenceCards();
+    };
 
-  onChange = async (e, pageInfo) => {
-    await this.setState({ activePage: pageInfo.activePage });
-    this.makeEvidenceCards();
-  };
+    onChange = async (e, pageInfo) => {
+        await this.setState({ activePage: pageInfo.activePage });
+        this.makeEvidenceCards();
+    };
 
-  handleInputChange = async (e, { value }) => {
-      await this.setState({ activePage: value });
-      this.makeEvidenceCards();
-  }
+    handleInputChange = async (e, { value }) => {
+        await this.setState({ activePage: value });
+        this.makeEvidenceCards();
+    }
 
-  makeEvidenceCards = async () => {
+    makeEvidenceCards = async () => {
 
-    let eList = [];
-    let eHolder = [];
-    await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
+        let eList = [];
+        let eHolder = [];
+        await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
 
     for (let i = this.state.activePage * 9 - 9; i < this.state.activePage * 9; i++) {
       try {
@@ -66,7 +66,9 @@ class AllEvidence extends Component {
       }
     }
 
-    // create a set of zombie cards in the state table
+
+        // create a set of zombie cards in the state table
+
 
     let evidenceTable = [];
     for (let i = 0; i < eList.length; i++) {
@@ -91,31 +93,31 @@ class AllEvidence extends Component {
     this.setState({ evidenceTable });
   };
 
-  render() {
-    return (
-      <div>
-        <Segment style={{ minHeight:'1em' }} />
+    render() {
+        return (
+            <div>
+            <Segment style={{ minHeight:'1em' }} />
         <hr />
         <h2> Complete Evidence Locker </h2>
         The evidence you hold has a blue background; evidence available to be checked out has a white background; evidence checked out by someone else has a red background.
         <br />To view more information about a piece of evidence and view related actions, click on the card.
         <hr />
         <Grid verticalAlign="middle">
-          <Grid.Column align='center' >
+            <Grid.Column align='center' >
             <Pagination
-              activePage={this.state.activePage}
-              onPageChange={this.onChange}
-              totalPages={this.state.totalPages}
-            />
-          </Grid.Column>
+        activePage={this.state.activePage}
+        onPageChange={this.onChange}
+        totalPages={this.state.totalPages}
+        />
+        </Grid.Column>
         </Grid>
         <br /> <br />
         <div>
-          <Card.Group>{this.state.evidenceTable}</Card.Group>
+        <Card.Group>{this.state.evidenceTable}</Card.Group>
         </div>
-      </div>
+        </div>
     );
-  }
+    }
 }
 
 export default connect(mapStateToProps)(AllEvidence);

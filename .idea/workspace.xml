@@ -53,6 +53,14 @@
       <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\components" />
@@ -63,7 +71,11 @@
     </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
+<<<<<<< HEAD
     <configuration>C:\Users\smonk\AppData\Roaming\Subversion</configuration>
+=======
+    <configuration>C:\Users\awhit\AppData\Roaming\Subversion</configuration>
+>>>>>>> a5e94946d5f2bfa06371d192545288dd3f3d6a6a
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
