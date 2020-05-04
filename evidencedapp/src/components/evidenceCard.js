@@ -67,10 +67,10 @@ class EvidenceCard extends Component {
           <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
           <Card.Content extra>
-            <Button color="Blue" onClick={e => this.detailsModalOpen(e)}>
+            <Button color="blue" onClick={e => this.detailsModalOpen(e)}>
               View Details
             </Button>
-            <Button color="Blue" onClick={e => this.checkModalOpen(e)}>
+            <Button color="blue" onClick={e => this.checkModalOpen(e)}>
               Check In
             </Button>
           </Card.Content>
@@ -116,7 +116,7 @@ class EvidenceCard extends Component {
               <Button color="LightGrey" onClick={e => this.detailsModalOpen(e)}>
                 View Details
               </Button>
-              <Button color="Blue" onClick={e => this.checkModalOpen(e)}>
+              <Button color="LightGrey" onClick={e => this.checkModalOpen(e)}>
                 Check Out
               </Button>
             </Card.Content>
@@ -159,7 +159,7 @@ class EvidenceCard extends Component {
           <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
           <Card.Content extra>
-            <Button color="DarkRed" onClick={e => this.detailsModalOpen(e)}>
+            <Button color="red" onClick={e => this.detailsModalOpen(e)}>
               View Details
             </Button>
           </Card.Content>
