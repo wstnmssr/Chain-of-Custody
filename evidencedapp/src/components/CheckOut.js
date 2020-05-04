@@ -4,9 +4,10 @@ import { connect } from "react-redux";
 import { Button, Header, Icon, Input, Form, Message, Segment, TextArea, Checkbox, Modal } from "semantic-ui-react";
 // import EvidenceCard from "../components/zombieCard";
 
-class CheckIn extends Component {
+class CheckOut extends Component {
   state = {
-    value: false,
+    value: true,
+    reason: "",
     message: "",
     errorMessage: "",
     loading: false,
@@ -22,7 +23,7 @@ class CheckIn extends Component {
     if (this.state.value) {
       try {
         await this.props.CoC.methods
-          .check_in(this.props.evidence.itemNumber)
+          .check_out(this.props.evidence.itemNumber, this.state.reason)
           .send({
             from: this.props.userAddress
           });
@@ -49,32 +50,29 @@ class CheckIn extends Component {
   render() {
     return (
       <div>
-        <Segment style={{ minHeight:'1em' }} />
-        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
-          <Form.Field
-            control={Checkbox}
-            label={{ children: 'I confirm that I want to check in this piece of evidence.' }}
-            onChange={event => this.setState( { value: !this.state.value })}
-          />
-          <br />
+      <Segment padded style={{ minHeight:'1em' }} >
+      <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+        <Form.Field
+          control={TextArea}
+          label="Purpose for checking out this piece of evidence."
+          onChange={event => this.setState( { purpose: event.target.value})}
+        />
+        <Form.Field
+          control={Checkbox}
+          label={{ children: 'I confirm that I want to check out this piece of evidence.' }}
+          onChange={event => this.setState( { value: true })}
+        />
+        <br />
 
-          <Message error header="Oops!" content={this.state.errorMessage} />
-      <Modal.Actions>
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
-        </Button>
-
-        <Button color="red" onClick={this.handleClose} inverted>
-          <Icon name="cancel" /> Close
-        </Button>
-      </Modal.Actions>
-    <hr />
-    <h2>{this.state.message}</h2>
-    </Form>
-    </div>
+          </Button>
+        </Form>
+      </Segment>
+      </div>
   );
   }
 }
 
-export default CheckIn;
+export default CheckOut;

@@ -4,10 +4,9 @@ import { connect } from "react-redux";
 import { Button, Header, Icon, Input, Form, Message, Segment, TextArea, Checkbox, Modal } from "semantic-ui-react";
 // import EvidenceCard from "../components/zombieCard";
 
-class CheckOut extends Component {
+class CheckIn extends Component {
   state = {
     value: true,
-    reason: "",
     message: "",
     errorMessage: "",
     loading: false,
@@ -23,7 +22,7 @@ class CheckOut extends Component {
     if (this.state.value) {
       try {
         await this.props.CoC.methods
-          .check_out(this.props.evidence.itemNumber, this.state.reason)
+          .check_in(this.props.evidence.itemNumber)
           .send({
             from: this.props.userAddress
           });
@@ -32,7 +31,6 @@ class CheckOut extends Component {
           message: "Transaction completed - thank you!"
         });
       } catch (err) {
-        console.log(err);
         this.setState({
           loading: false,
           errorMessage: err.message,
@@ -51,29 +49,25 @@ class CheckOut extends Component {
   render() {
     return (
       <div>
-      <Segment padded style={{ minHeight:'1em' }} >
-      <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
-        <Form.Field
-          control={TextArea}
-          label="Purpose for checking out this piece of evidence."
-          onChange={event => this.setState( { purpose: event.target.value})}
-        />
-        <Form.Field
-          control={Checkbox}
-          label={{ children: 'I confirm that I want to check out this piece of evidence.' }}
-          onChange={event => this.setState( { value: true })}
-        />
-        <br />
+        <Segment padded style={{ minHeight:'1em' }} >
+        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+          <Form.Field
+            control={Checkbox}
+            label={{ children: 'I confirm that I want to check in this piece of evidence.' }}
+            onChange={event => this.setState( { value: true })}
+          />
+          <br />
 
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
-          </Button>
-        </Form>
+        </Button>
+
+    </Form>
       </Segment>
-      </div>
+    </div>
   );
   }
 }
 
-export default CheckOut;
+export default CheckIn;

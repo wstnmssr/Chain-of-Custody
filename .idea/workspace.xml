@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/zombiedapp/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zombiedapp/src/contract_ABI" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -48,8 +48,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\src\pages" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\src\pages" />
       <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
       <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
@@ -62,9 +62,20 @@
       <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
       <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\components" />
+      <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public" />
+      <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
+    </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
+<<<<<<< HEAD
+    <configuration>C:\Users\smonk\AppData\Roaming\Subversion</configuration>
+=======
     <configuration>C:\Users\awhit\AppData\Roaming\Subversion</configuration>
+>>>>>>> a5e94946d5f2bfa06371d192545288dd3f3d6a6a
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -152,6 +163,10 @@
     </state>
     <state x="239" y="106" key="SettingsEditor/0.0.1600.868/1600.0.1600.900@0.0.1600.868" timestamp="1588448307446" />
     <state x="1839" y="110" key="SettingsEditor/0.0.1600.868/1600.0.1600.900@1600.0.1600.900" timestamp="1587868263794" />
+    <state x="493" y="189" width="672" height="678" key="search.everywhere.popup" timestamp="1588560615399">
+      <screen x="0" y="0" width="1600" height="868" />
+    </state>
+    <state x="493" y="189" width="672" height="678" key="search.everywhere.popup/0.0.1600.868/1600.0.1600.900@0.0.1600.868" timestamp="1588560615399" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

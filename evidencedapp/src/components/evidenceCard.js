@@ -93,9 +93,18 @@ class EvidenceCard extends Component {
             icon="browser"
             content="Check In"
           />
-          <CheckIn evidence={this.props} />
+          <CheckIn
+            CoC={this.props.CoC}
+            userAddress={this.props.userAddress}
+            evidence={this.props}
+          />
+          <Modal.Actions>
+            <Button color="red" onClick={this.handleClose} inverted>
+              <Icon name="cancel" /> Close
+            </Button>
+          </Modal.Actions>
         </Modal>
-        </Card>
+      </Card>
       ); }
 
       else if (this.props.myHolder === 'in') {

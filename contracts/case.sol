@@ -114,7 +114,7 @@ contract Case is ChainOfCustody {
         return storage_log[_item_number];
     }
 
-    function get_current_check_out(uint _item_number) only_authorized public view returns (Check_Out memory) {
+    function get_current_check_out(uint _item_number) public view returns (Check_Out memory) {
         require(storage_log[_item_number].length != 0);
         return storage_log[_item_number][storage_log[_item_number].length-1];
     }
