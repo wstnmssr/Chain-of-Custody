@@ -136,7 +136,7 @@ class LogNewEvidence extends Component {
         <Link to="/AllEvidence">
           <Button color="red" inverted>
             <Icon name="cancel" />
-            Close
+            Back to Evidence Locker
           </Button>
         </Link>
         <hr />
