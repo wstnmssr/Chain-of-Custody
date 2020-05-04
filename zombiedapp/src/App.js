@@ -8,16 +8,12 @@ import { Container } from "semantic-ui-react";
 import { Provider } from "react-redux";
 
 import MyEvidenceHoldings from "./pages/MyEvidenceHoldings";
+import AuthorizeOthers from "./pages/AuthorizeOthers";
 import LogNewEvidence from "./pages/LogNewEvidence"
 import AllEvidence from "./pages/AllEvidence";
 import TopBar from "./components/TopBar";
 import Greeting from "./pages/Greeting";
 import Team from "./pages/Team"
-
-import AttackZombie from "./pages/AttackZombie";
-import FeedOnKitty from "./pages/FeedOnKitty";
-import ChangeName from "./pages/ChangeName";
-import LevelUp from "./pages/LevelUp";
 
 import store from "./redux/store";
 
@@ -69,6 +65,7 @@ class App extends Component {
               <Route exact path="/LogNewEvidence" component={LogNewEvidence} />
               <Route exact path="/myEvidenceHoldings" component={MyEvidenceHoldings} />
               <Route exact path="/AllEvidence" component={AllEvidence} />
+              <Route exact path="/AuthorizeOthers" component={AuthorizeOthers} />
               {/* routes used in zombie action modal */}
             </div>
           </Container>

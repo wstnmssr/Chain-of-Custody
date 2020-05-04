@@ -49,6 +49,12 @@ class TopBar extends Component {
                   <Header style={{fontSize:'1em', fontWeight: 'normal'}}> All Evidence </Header>
                 </Link>
               </Dropdown.Item>
+
+              <Dropdown.Item>
+                <Link to={{ pathname: "/AuthorizeOthers" }}>
+                  <Header style={{fontSize:'1em', fontWeight: 'normal'}}> Authorize Others </Header>
+                </Link>
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
