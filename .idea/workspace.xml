@@ -47,13 +47,6 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
-      <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
-      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
-      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wes\WebstormProjects\Chain-of-Custody\zombiedapp\public" />
       <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
@@ -61,9 +54,16 @@
       <recent name="$PROJECT_DIR$/zombiedapp/public/static" />
       <recent name="$PROJECT_DIR$/zombiedapp/public/static/images" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\awhit\WebstormProjects\Chain-of-Custody\zombiedapp\src\contract_ABI" />
+      <recent name="C:\Users\smonk\WebstormProjects\Chain-of-Custody\zombiedapp\public\static\images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/images" />
+      <recent name="$PROJECT_DIR$/zombiedapp/src/pages" />
+    </key>
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\smonk\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\awhit\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
