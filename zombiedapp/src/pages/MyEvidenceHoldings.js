@@ -107,4 +107,4 @@ class MyEvidenceHoldings extends Component {
   }
 }
 
-export default connect(mapStateToProps)(AllEvidence);
+export default connect(mapStateToProps)(MyEvidenceHoldings);
