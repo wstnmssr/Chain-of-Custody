@@ -32,7 +32,6 @@ class CheckOut extends Component {
           message: "Transaction completed - thank you!"
         });
       } catch (err) {
-        console.log(err);
         this.setState({
           loading: false,
           errorMessage: err.message,

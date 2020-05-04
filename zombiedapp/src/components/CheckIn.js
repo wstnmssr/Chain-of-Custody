@@ -6,7 +6,7 @@ import { Button, Header, Icon, Input, Form, Message, Segment, TextArea, Checkbox
 
 class CheckIn extends Component {
   state = {
-    value: false,
+    value: true,
     message: "",
     errorMessage: "",
     loading: false,
@@ -49,29 +49,22 @@ class CheckIn extends Component {
   render() {
     return (
       <div>
-        <Segment style={{ minHeight:'1em' }} />
+        <Segment padded style={{ minHeight:'1em' }} >
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field
             control={Checkbox}
             label={{ children: 'I confirm that I want to check in this piece of evidence.' }}
-            onChange={event => this.setState( { value: !this.state.value })}
+            onChange={event => this.setState( { value: true })}
           />
           <br />
 
-          <Message error header="Oops!" content={this.state.errorMessage} />
-      <Modal.Actions>
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
         </Button>
 
-        <Button color="red" onClick={this.handleClose} inverted>
-          <Icon name="cancel" /> Close
-        </Button>
-      </Modal.Actions>
-    <hr />
-    <h2>{this.state.message}</h2>
     </Form>
+      </Segment>
     </div>
   );
   }
