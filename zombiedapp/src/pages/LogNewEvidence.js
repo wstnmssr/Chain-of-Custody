@@ -129,12 +129,10 @@ class LogNewEvidence extends Component {
         />
 
         <Message error header="Oops!" content={this.state.errorMessage} />
-        <Link to="/">
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
         </Button>
-        </Link>
         <Link to="/AllEvidence">
           <Button color="red" inverted>
             <Icon name="cancel" />

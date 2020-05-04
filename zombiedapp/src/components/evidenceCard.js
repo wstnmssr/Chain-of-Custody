@@ -52,13 +52,10 @@ class EvidenceCard extends Component {
 
     // create the JSX depending on whether you own the zombie or not
 
-    if (this.props.myHolder) {
-      // Owner zombie: render card and tooltip and modal for zombie actions
-      console.log("my ev");
+    if (this.props.myHolder === 'user') {
       return (
         <Card style={{ backgroundColor: "LightGreen" }} raised>
           <ReactTooltip delayShow={400} />
-
           <a
             href="javascript:;"
             data-tip="Click on me to view actions for this evidence"
@@ -66,8 +63,6 @@ class EvidenceCard extends Component {
           >
             <EvidenceCardContent evidence={this.props} />
           </a>
-
-          {/* a modal is like an "alert", it's a popup that greys out the lower screen and displays its content on top of everything */}
 
           <Modal open={this.state.modalOpen} onClose={this.handleClose}>
             <Header
@@ -83,10 +78,38 @@ class EvidenceCard extends Component {
           </Modal>
         </Card>
       ); }
-    // someone else's zombie.  just show the card.
+
+      else if (this.props.myHolder === 'in') {
+        return (
+          <Card style={{ backgroundColor: "White" }} raised>
+            <ReactTooltip delayShow={400} />
+            <EvidenceCardContent evidence={this.props} />
+            <Card.Content extra>
+              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+                View Details
+              </Button>
+              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+                Check Out
+              </Button>
+            </Card.Content>
+          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+          <Header
+            icon="browser"
+            content="These are the actions you can take with this evidence!"
+          />
+
+          <Modal.Actions>
+            <Button color="red" onClick={this.handleClose} inverted>
+              <Icon name="cancel" /> Close
+            </Button>
+          </Modal.Actions>
+        </Modal>
+       </Card>
+      ); }
+
     else {
       return (
-        <Card style={{ backgroundColor: "LavenderBlush" }}>
+        <Card style={{ backgroundColor: "LightRed" }}>
           <EvidenceCardContent evidence={this.props} />
         </Card>
       );}
