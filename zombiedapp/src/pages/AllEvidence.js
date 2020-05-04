@@ -39,19 +39,27 @@ class AllEvidence extends Component {
     let eHolder = [];
     await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
 
-    for (
-      let i = this.state.activePage * 9 - 9;
-      i < this.state.activePage * 9;
-      i++
-    ) {
+    for (let i = this.state.activePage * 9 - 9; i < this.state.activePage * 9; i++) {
       try {
         let metaData = await this.props.CoC.methods.get_evidence(i).call();
+        if (!metaData.exists)
+          break;
         eList.push(metaData);
-        let myHolder = await this.props.CoC.evidence_holder.call(i, function(err,res){
-        });
-        eHolder.push(myHolder);
       } catch (err) {
         break;
+      }
+      try {
+        let myHolder = await this.props.CoC.get_current_check_out(i).call();
+        if (await this.props.CoC.getIfCheckedIn(i).call()) {
+          eHolder.push('in');
+        } else {
+          if (myHolder === this.props.userAddress)
+            eHolder.push('user')
+          else
+            eHolder.push('out');
+        }
+      } catch (err) {
+        eHolder.push('in')
       }
     }
 
@@ -71,8 +79,7 @@ class AllEvidence extends Component {
           agentPhoneNumber={eList[i].phone_number}
           condition={eList[i].condition}
           notes={eList[i].notes}
-          status={eList[i].status}
-          myHolder={this.props.userAddress === eHolder[eList[i].item_number]}
+          myHolder={eHolder[i]}
         />
       );
     }
