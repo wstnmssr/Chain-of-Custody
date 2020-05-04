@@ -74,7 +74,10 @@ class Team extends Component {
               <Card >
                 <Image src='static/images/france.jpg' wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Notre Chef Intrépide</Card.Header>
+                  <Card.Header>Dr. Joseph Gersch</Card.Header>
+                  <Card.Description>
+                    Notre Chef Intrépide
+                  </Card.Description>
                 </Card.Content>
               </Card>
             </Grid.Column>
