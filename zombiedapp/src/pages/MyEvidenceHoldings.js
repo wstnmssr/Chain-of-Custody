@@ -11,7 +11,7 @@ function mapStateToProps(state) {
   };
 }
 
-class AllEvidence extends Component {
+class MyEvidenceHoldings extends Component {
   state = {
     evidenceTable: [],
     activePage: 1,
