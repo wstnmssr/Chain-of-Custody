@@ -14,7 +14,7 @@ class EvidenceCardContent extends Component {
   render() {
     return (
       <>
-        <Image src='static/images/police-tape-laptop.jpg' />
+        <Image src='static/images/police-tape-laptop.png' />
         <Card.Content>
           <Card.Header>Evidence Description: </Card.Header>
           <Card.Description>
