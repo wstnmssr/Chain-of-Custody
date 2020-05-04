@@ -13,7 +13,7 @@ class EvidenceCardContent extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Image src='static/images/france.jpg' />
         <Card.Content>
           <Card.Header>Evidence Description: </Card.Header>
@@ -21,7 +21,7 @@ class EvidenceCardContent extends Component {
             {this.truncate(this.props.evidence.evidenceDescription)}
           </Card.Description>
         </Card.Content>
-      </div>
+      </>
 
     );
   }

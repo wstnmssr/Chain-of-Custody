@@ -19,13 +19,11 @@ class LogNewEvidence extends Component {
     suspectName: "",
     offenseDescription: "",
     condition: "",
-    status: "",
     evidenceDescription: "",
     notes: "",
     message: "",
     errorMessage: "",
     loading: false,
-    zombieId: null
   };
 
   // get a random cryptokitty image and the hungry zombie ID when the component mounts
@@ -46,7 +44,7 @@ class LogNewEvidence extends Component {
       await this.props.CoC.methods
         .log_evidence(this.state.agentName, this.state.evidenceDescription, this.state.offenseDescription,
                       this.state.victimName, this.state.suspectName, this.state.agentPhoneNumber,
-                      this.state.condition, this.state.notes, this.state.status)
+                      this.state.condition, this.state.notes)
         .send({
           from: this.props.userAddress
         });
@@ -110,20 +108,13 @@ class LogNewEvidence extends Component {
         />
 
         <h4 class="ui dividing header"> Evidence Information</h4>
-          <div class="two fields">
           <Form.Field
             label = 'Condition'
             control = {Input}
             placeholder="Good/Less Than Good"
             onChange={event => this.setState({ condition: event.target.value })}
           />
-          <Form.Field
-            label='Status'
-            control={Input}
-            placeholder="Checked In/Out"
-            onChange={event => this.setState( { status: event.target.value })}
-          />
-        </div>
+
         <Form.Field
           label='Evidence Description' id='form-textarea-control-opinion'
           control={TextArea}
@@ -138,10 +129,12 @@ class LogNewEvidence extends Component {
         />
 
         <Message error header="Oops!" content={this.state.errorMessage} />
+        <Link to="/">
         <Button primary type="submit" loading={this.state.loading}>
           <Icon name="check" />
           Submit
         </Button>
+        </Link>
         <Link to="/AllEvidence">
           <Button color="red" inverted>
             <Icon name="cancel" />
