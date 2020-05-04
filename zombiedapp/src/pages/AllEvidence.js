@@ -39,45 +39,54 @@ class AllEvidence extends Component {
         let eHolder = [];
         await this.setState({ evidenceTable: [] }); // clear screen while waiting for data
 
-        for (
-            let i = this.state.activePage * 9 - 9;
-            i < this.state.activePage * 9;
-            i++
-        ) {
-            try {
-                let metaData = await this.props.CoC.methods.get_evidence(i).call();
-                eList.push(metaData);
-                let myHolder = await this.props.CoC.evidence_holder.call(i, function(err,res){
-                });
-                eHolder.push(myHolder);
-            } catch (err) {
-                break;
-            }
+    for (let i = this.state.activePage * 9 - 9; i < this.state.activePage * 9; i++) {
+      try {
+        let metaData = await this.props.CoC.methods.get_evidence(i).call();
+        if (!metaData.exists)
+          break;
+        eList.push(metaData);
+      } catch (err) {
+        break;
+      }
+      try {
+        let myHolder = await this.props.CoC.get_current_check_out(i).call();
+        if (await this.props.CoC.getIfCheckedIn(i).call()) {
+          eHolder.push('in');
+        } else {
+          if (myHolder === this.props.userAddress)
+            eHolder.push('user')
+          else
+            eHolder.push('out');
         }
+      } catch (err) {
+        eHolder.push('in')
+      }
+    }
+
 
         // create a set of zombie cards in the state table
 
-        let evidenceTable = [];
-        for (let i = 0; i < eList.length; i++) {
-            evidenceTable.push(
-            <EvidenceCard
-            key={i}
-            itemNumber={eList[i].item_number}
-            submittingAgent={eList[i].submitting_agent}
-            evidenceDescription={eList[i].description_of_evidence}
-            offenseDescription={eList[i].description_of_offense}
-            victim={eList[i].victim_name}
-            suspect={eList[i].suspect_name}
-            agentPhoneNumber={eList[i].phone_number}
-            condition={eList[i].condition}
-            notes={eList[i].notes}
-            status={eList[i].status}
-            myHolder={this.props.userAddress === eHolder[eList[i].item_number]}
-            />
-        );
-        }
-        this.setState({ evidenceTable });
-    };
+
+    let evidenceTable = [];
+    for (let i = 0; i < eList.length; i++) {
+      evidenceTable.push(
+        <EvidenceCard
+          key={i}
+          itemNumber={eList[i].item_number}
+          submittingAgent={eList[i].submitting_agent}
+          evidenceDescription={eList[i].description_of_evidence}
+          offenseDescription={eList[i].description_of_offense}
+          victim={eList[i].victim_name}
+          suspect={eList[i].suspect_name}
+          agentPhoneNumber={eList[i].phone_number}
+          condition={eList[i].condition}
+          notes={eList[i].notes}
+          myHolder={eHolder[i]}
+        />
+      );
+    }
+    this.setState({ evidenceTable });
+  };
 
     render() {
         return (

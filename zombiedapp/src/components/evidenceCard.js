@@ -3,6 +3,7 @@ import { Icon, Card, Header, Modal, Button } from "semantic-ui-react";
 import ReactTooltip from "react-tooltip";
 import ActionButton from "./ActionButton";
 import EvidenceCardContent from "./evidenceCardContent";
+import DetailsModalContent from "./DetailsModalContent";
 
 class EvidenceCard extends Component {
   state = {
@@ -52,29 +53,26 @@ class EvidenceCard extends Component {
 
     // create the JSX depending on whether you own the zombie or not
 
-    if (this.props.myHolder) {
-      // Owner zombie: render card and tooltip and modal for zombie actions
-      console.log("my ev");
+    if (this.props.myHolder === 'user') {
       return (
-        <Card style={{ backgroundColor: "LightGreen" }} raised>
+        <Card style={{ backgroundColor: "LightBlue" }} raised>
           <ReactTooltip delayShow={400} />
-
-          <a
-            href="javascript:;"
-            data-tip="Click on me to view actions for this evidence"
-            onClick={e => this.modalOpen(e)}
-          >
-            <EvidenceCardContent evidence={this.props} />
-          </a>
-
-          {/* a modal is like an "alert", it's a popup that greys out the lower screen and displays its content on top of everything */}
+          <EvidenceCardContent evidence={this.props} />
+          <Card.Content extra>
+            <Button color="Blue" onClick={e => this.modalOpen(e)}>
+              View Details
+            </Button>
+            <Button color="Blue" onClick={e => this.modalOpen(e)}>
+              Check In
+            </Button>
+          </Card.Content>
 
           <Modal open={this.state.modalOpen} onClose={this.handleClose}>
             <Header
               icon="browser"
-              content="These are the actions you can take with your evidence!"
+              content="Evidence Details"
             />
-
+            <DetailsModalContent evidence={this.props} />
             <Modal.Actions>
               <Button color="red" onClick={this.handleClose} inverted>
                 <Icon name="cancel" /> Close
@@ -83,13 +81,60 @@ class EvidenceCard extends Component {
           </Modal>
         </Card>
       ); }
-    // someone else's zombie.  just show the card.
+
+      else if (this.props.myHolder === 'in') {
+        return (
+          <Card style={{ backgroundColor: "White" }} raised>
+            <ReactTooltip delayShow={400} />
+            <EvidenceCardContent evidence={this.props} />
+            <Card.Content extra>
+              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+                View Details
+              </Button>
+              <Button color="LightGrey" onClick={e => this.modalOpen(e)}>
+                Check Out
+              </Button>
+            </Card.Content>
+          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+          <Header
+            icon="browser"
+            content="Evidence Details"
+          />
+          <DetailsModalContent evidence={this.props} />
+          <Modal.Actions>
+            <Button color="red" onClick={this.handleClose} inverted>
+              <Icon name="cancel" /> Close
+            </Button>
+          </Modal.Actions>
+        </Modal>
+       </Card>
+      ); }
+
     else {
       return (
-        <Card style={{ backgroundColor: "LavenderBlush" }}>
+        <Card style={{ backgroundColor: "LightRed" }} raised>
+          <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
-        </Card>
-      );}
+          <Card.Content extra>
+            <Button color="DarkRed" onClick={e => this.modalOpen(e)}>
+              View Details
+            </Button>
+          </Card.Content>
+
+          <Modal open={this.state.modalOpen} onClose={this.handleClose}>
+          <Header
+            icon="browser"
+            content="Evidence Details"
+          />
+          <DetailsModalContent evidence={this.props} />
+          <Modal.Actions>
+            <Button color="red" onClick={this.handleClose} inverted>
+              <Icon name="cancel" /> Close
+            </Button>
+          </Modal.Actions>
+        </Modal>
+      </Card>
+    );}
   }
 }
 
