@@ -6,16 +6,16 @@ import EvidenceCard from "../components/evidenceCard";
 function mapStateToProps(state) {
   return {
     CoC: state.CoC,
-    userZombieCount: state.userZombieCount,
+    userEvidenceCount: state.userEvidenceCount,
     userAddress: state.userAddress
   };
 }
 
 class MyEvidenceHoldings extends Component {
   state = {
-    ZombieTable: [],
+    EvidenceTable: [],
     activePage: 1,
-    totalPages: Math.ceil(this.props.userZombieCount / 9)
+    totalPages: Math.ceil(this.props.userEvidenceCount / 9)
   };
 
   componentDidMount = async () => {
@@ -31,6 +31,7 @@ class MyEvidenceHoldings extends Component {
     await this.setState({ activePage: value });
     this.makeZombieCards();
   };
+
   makeZombieCards = async () => {
     const myZombies = await this.props.CoC.methods
       .getEvidenceByOwner(this.props.userAddress)

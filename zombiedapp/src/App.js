@@ -70,10 +70,6 @@ class App extends Component {
               <Route exact path="/myEvidenceHoldings" component={MyEvidenceHoldings} />
               <Route exact path="/AllEvidence" component={AllEvidence} />
               {/* routes used in zombie action modal */}
-              <Route exact path="/AttackZombie" component={AttackZombie} />
-              <Route exact path="/FeedOnKitty" component={FeedOnKitty} />
-              <Route exact path="/ChangeName" component={ChangeName} />
-              <Route exact path="/LevelUp" component={LevelUp} />
             </div>
           </Container>
         </HashRouter>
