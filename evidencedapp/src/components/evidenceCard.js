@@ -155,7 +155,7 @@ class EvidenceCard extends Component {
 
     else {
       return (
-        <Card style={{ backgroundColor: "LightRed" }} raised>
+        <Card style={{ backgroundColor: "pink" }} raised>
           <ReactTooltip delayShow={400} />
           <EvidenceCardContent evidence={this.props} />
           <Card.Content extra>
